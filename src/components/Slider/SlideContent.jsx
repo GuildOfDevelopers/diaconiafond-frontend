@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
+import {SliderContext} from "./ Slider";
 
 import style from "./Slider.module.scss";
 
-export default function SlideContent({content}) {
-    const {items, slideNumber} = content
+export default function SlideContent() {
+    const {items, slideNumber} = useContext(SliderContext)
     const foundItem = items.find((item, index) => slideNumber === index)
     const {title, body} = foundItem.content
     return <div className={style.content}>

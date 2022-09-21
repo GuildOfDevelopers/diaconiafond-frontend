@@ -1,10 +1,14 @@
+@import "./src/scss/var";
+@import "./src/scss/mixins";
+
+
 .wrapper {
   position: relative;
-  max-width: 1180px;
+  max-width: 1440px;
   padding: 64px 130px;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   &::before {
@@ -19,37 +23,19 @@
 }
 
 .slider {
-  width: 706px;
   overflow: hidden;
-  //position: relative;
 }
 
 .slide_list {
   display: flex;
-  //justify-content: flex-end;
   align-items: center;
-  //column-gap: 20px;
+  width: 706px;
   transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  position: relative;
 }
 
 .slide_image {
   display: block;
-  //display: flex;
-  //margin: 0 auto;
-  //max-height: 300px;
-  //width: 100%;
-  object-fit: contain;
 }
-
-//.slide_title {
-//  text-align: center;
-//  margin-top: 10px;
-//}
-
 
 .arrow_left, .arrow_right {
   position: absolute;
@@ -59,11 +45,11 @@
 }
 
 .arrow_left {
-  left: -86px;
+  left: 44px;
 }
 
 .arrow_right {
-  right: -86px;
+  right: 44px;
 }
 
 .dots {
@@ -88,7 +74,7 @@
 
 .dot_active {
   width: 40px;
-  background-color: #E38025
+  background-color: $color-orange
 }
 
 .dot_inactive {
@@ -97,30 +83,22 @@
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
+  max-width: 448px;
+  margin-right: 26px;
 }
 
 .title {
   margin-bottom: 16px;
-  //font-family: 'Podkova';
   font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 56px;
+  @include font_48_h1;
   text-transform: uppercase;
   color: #303030;
 }
 
 .body {
   margin-bottom: 32px;
-  //font-family: 'Podkova';
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  @include font_24;
   color: #303030;
 }
 
@@ -129,12 +107,11 @@
   height: 50px;
   border: none;
   border-radius: 4px;
-  background-color: #84C54E;
+  background-color: $color-lightGreen;
   //font-family: 'PF Agora Slab Pro';
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  @include font_18_h4;
   text-transform: uppercase;
   color: #FFFFFF;
 }
+

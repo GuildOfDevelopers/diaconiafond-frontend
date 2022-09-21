@@ -4,11 +4,7 @@ import SlideImage from "./SlideImage";
 
 import style from "./Slider.module.scss";
 
-export default function Slide({data: {url, content}}) {
-    return (
-        <div className={style.slide}>
-            <SlideImage src={url} alt={content}/>
-
-        </div>
-    );
+export default function Slide({data}) {
+    const {url, alt} = data;
+    return <img src={url} alt={alt} className={style.slide_image}/>
 }

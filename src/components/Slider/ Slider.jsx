@@ -10,12 +10,42 @@ import SlideContent from "./SlideContent";
 export const SliderContext = createContext(null);
 
 const SLIDERS_TEMP = [
-    {url: require('../../images/Sldier/slider-1.jpg'), content: {title: 'Slider-1', body: 'Lorem ipsum maybe'}},
-    {url: require('../../images/Sldier/slider-1.jpg'), content: {title: 'Slider-2', body: 'Lorem ipsum maybe'}},
-    {url: require('../../images/Sldier/slider-1.jpg'), content: {title: 'Slider-3', body: 'Lorem ipsum maybe'}},
-    {url: require('../../images/Sldier/slider-1.jpg'), content: {title: 'Slider-4', body: 'Lorem ipsum maybe'}},
-    {url: require('../../images/Sldier/slider-1.jpg'), content: {title: 'Slider-5', body: 'Lorem ipsum maybe'}},
-    {url: require('../../images/Sldier/slider-1.jpg'), content: {title: 'Slider-6', body: 'Lorem ipsum maybe'}},
+    {
+        url: require('../../images/Sldier/slider-1.jpg'),
+        alt: '',
+        content: {
+            title: 'Алкоголизм\n' +
+                'и наркомания',
+            body: 'являются одной из наиболее серьезных проблем современного общества. По данным Росстата за 2020 год число смертей, обусловленных алкоголем, превысило 50 тыс человек. '
+        }
+    },
+    {
+        url: require('../../images/Sldier/slider-1.jpg'),
+        alt: '',
+        content: {
+            title: 'Алкоголизм\n' +
+                'и наркомания',
+            body: 'являются одной из наиболее серьезных проблем современного общества. По данным Росстата за 2020 год число смертей, обусловленных алкоголем, превысило 50 тыс человек. '
+        }
+    },
+    {
+        url: require('../../images/Sldier/slider-1.jpg'),
+        alt: '',
+        content: {
+            title: 'Алкоголизм\n' +
+                'и наркомания',
+            body: 'являются одной из наиболее серьезных проблем современного общества. По данным Росстата за 2020 год число смертей, обусловленных алкоголем, превысило 50 тыс человек. '
+        }
+    },
+    {
+        url: require('../../images/Sldier/slider-1.jpg'),
+        alt: '',
+        content: {
+            title: 'Алкоголизм\n' +
+                'и наркомания',
+            body: 'являются одной из наиболее серьезных проблем современного общества. По данным Росстата за 2020 год число смертей, обусловленных алкоголем, превысило 50 тыс человек. '
+        }
+    },
 ]
 
 const Slider = function ({width, height}) {
@@ -23,7 +53,7 @@ const Slider = function ({width, height}) {
     const [slide, setSlide] = useState(0);
 
     const changeSlide = (direction = 1) => {
-        let slideNumber = 0;
+        let slideNumber;
 
         if (slide + direction < 0) {
             slideNumber = items.length - 1;
@@ -36,21 +66,23 @@ const Slider = function ({width, height}) {
 
     return (
         <div className={style.wrapper}>
-            <div className={style.slider}>
-                <SliderContext.Provider
-                    value={{
-                        changeSlide,
-                        slidesCount: items.length,
-                        slideNumber: slide,
-                        items,
-                    }}
-                >
+            <SliderContext.Provider
+                value={{
+                    changeSlide,
+                    slidesCount: items.length,
+                    slideNumber: slide,
+                    items,
+                }}
+            >
+                <SlideContent/>
+                <div className={style.slider}>
+
                     <Arrows/>
                     <SlidesList/>
                     <Dots/>
-                </SliderContext.Provider>
-            </div>
-            <SlideContent content={{items, slideNumber: slide}}/>
+
+                </div>
+            </SliderContext.Provider>
         </div>
     );
 };
