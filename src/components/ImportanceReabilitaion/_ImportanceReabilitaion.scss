@@ -1,0 +1,83 @@
+.importance {
+  background-color: $color-darkGrey;
+}
+
+.importance__wrapper {
+  max-width: 1440px;
+  margin: 0 auto 0px;
+  padding: 179px 130px 128px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.importance__title {
+  @include font_22_h3;
+  color: $color-white;
+  margin: 0 0 30px;
+}
+
+.importance__grid-container {
+  display: grid;
+  grid-template-columns: 2.05fr 1fr;
+  grid-template-rows: repeat(2, 272px);
+  grid-template-areas:
+    "first third"
+    "second third";
+  row-gap: 16px;
+  column-gap: 20px;
+  margin: 0 auto 0;
+}
+
+.importance__item-first {
+  display: flex;
+  column-gap: 20px;
+  grid-area: first;
+  background-color: $color-white;
+}
+
+.importance__item-first-image {
+  width: 49%;
+  object-fit: cover;
+}
+
+.importance__item-first-text {
+  @include font_16;
+  color: $color-darkGrey;
+  margin: 29px 28px 0 0;
+}
+
+.importance__item-second {
+  grid-area: second;
+  display: flex;
+  background-color: $color-white;
+  column-gap: 20px;
+}
+
+.importance__item-second-image {
+  width: 49%;
+  object-fit: cover;
+}
+
+.importance__item-second-text {
+  @include font_16;
+  color: $color-darkGrey;
+  margin: 29px 28px 0 0;
+}
+
+.importance__item-third {
+  grid-area: third;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+}
+
+.importance__item-third-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.importance__item-third-text {
+  @include font_16;
+  color: $color-darkGrey;
+  margin: 16px 14px 0;
+}

@@ -1,0 +1,58 @@
+.desease {
+  color: $color-white;
+}
+
+.disease__wrapper {
+  max-width: 1440px;
+  padding: 79px 0 0;
+  margin: 0 auto 0;
+}
+
+.disease__article {
+  background-color: $color-darkGrey;
+  width: 1030px;
+  height: 912px;
+  position: relative;
+  padding: 49px 0 0 130px;
+}
+
+.disease__title {
+  max-width: 458px;
+  color: $color-white;
+  @include font_32_h2;
+  margin: 0;
+}
+
+.disease__subtitle {
+  max-width: 480px;
+  color: $color-white;
+  @include font_20;
+  margin: 35px 0 45px 0;
+}
+
+.disease__key-point {
+  max-width: 480px;
+  color: $color-lightGreen;
+  @include font_24;
+  margin: 0 0 51px;
+}
+
+.disease__description {
+  max-width: 480px;
+  color: $color-white;
+  @include font_20;
+  margin: 0 0 15px;
+}
+
+.disease__text-highlite {
+  color: $color-lightGreen;
+}
+
+.disease__images {
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+  position: absolute;
+  top: 112px;
+  right: -280px;
+}
