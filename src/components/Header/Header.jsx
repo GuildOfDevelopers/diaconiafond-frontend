@@ -1,28 +1,37 @@
 import HeaderLogo from "../../images/logo_header.svg"
 
-const Header = () => {
+const Header = ({openPopup}) => {
 
-    return <header className="header">
-
-        <div className="header__content">
-
-            <img className="header__logo" src={HeaderLogo} alt="Логотип" />
-
-            <div className="header__menu">
-
-                <ul className="links">
-
-                    <li className="links__item"><a className="link" href="ww">Получить помощь</a></li>
-                    <li className="links__item"><a className="link" href="ww">О реабилитации</a></li>
-                    <li className="links__item"><a className="link" href="ww">Контакты</a></li>
-                </ul>
+  const clickToOpenPopup = () => openPopup(true)
 
 
-                <button className="header__button">ПОМОЧЬ ПРОЕКТУ</button>
+  return <header className="header">
 
-            </div>
-        </div>
-    </header>;
+    <div className="header__content">
+
+      <img className="header__logo" src={HeaderLogo} alt="Логотип"/>
+
+      <div className="header__menu">
+
+        <ul className="links">
+
+          <li className="links__item">
+            <button className="link" onClick={() => clickToOpenPopup()}>Получить помощь</button>
+          </li>
+          <li className="links__item">
+            <button className="link">О реабилитации</button>
+          </li>
+          <li className="links__item">
+            <button className="link">Контакты</button>
+          </li>
+        </ul>
+
+
+        <button className="header__button">ПОМОЧЬ ПРОЕКТУ</button>
+
+      </div>
+    </div>
+  </header>;
 };
 
 export default Header;
