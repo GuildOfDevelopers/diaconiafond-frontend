@@ -23,12 +23,12 @@ function App() {
         </Popup>
       </Layout>}
 
-      <Header openPopup={setIsPopupOpen}/>
+      {/*<Header openPopup={setIsPopupOpen}/>*/}
       <Slider/>
-      <WhatDesease/>
-      <AboutReabilitation/>
-      <GetReabilitation/>
-      <ImportanceReabilitaion/>
+      {/*<WhatDesease/>*/}
+      {/*<AboutReabilitation/>*/}
+      {/*<GetReabilitation/>*/}
+      {/*<ImportanceReabilitaion/>*/}
       <Footer/>
     </div>
   );
