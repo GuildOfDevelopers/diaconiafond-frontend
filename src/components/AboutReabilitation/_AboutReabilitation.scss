@@ -53,7 +53,8 @@ p {
 .about-reabilitaton__how-to-get {
 
   position: absolute;
-  top: 62%;
+  z-index: 100;
+  top: 58%;
   background-color: $color-lightGreen;
   background-image: url(../../images/aboutReabilitationHome.svg);
   background-repeat: no-repeat;
@@ -83,11 +84,12 @@ p {
 .how-to-get__alone {
   display: flex;
   justify-content: flex-end;
-  height: 248px;
+  z-index: 10;
+  height: 312px;
   position: relative;
   background-image: url(../../images/aboutReabLines.svg);
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: left bottom 27%;
 
   img {
     position: absolute;
