@@ -26,7 +26,6 @@ const Header = ({openPopup}) => {
           </li>
         </ul>
 
-
         <button className="header__button">ПОМОЧЬ ПРОЕКТУ</button>
 
       </div>
