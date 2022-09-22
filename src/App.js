@@ -5,7 +5,6 @@ import Slider from "./components/Slider/ Slider";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ImportanceReabilitaion from "./components/ImportanceReabilitaion/ImportanceReabilitaion";
-import GetReabilitation from "./components/GetReabilitation/GetReabilitation";
 import WhatDesease from "./components/WhatDesease/WhatDesease";
 import Popup from "./components/GetHelpPopup/Popup";
 import Layout from "./components/GetHelpPopup/Layout";
@@ -27,7 +26,6 @@ function App() {
       <Slider/>
       <WhatDesease/>
       <AboutReabilitation/>
-      <GetReabilitation/>
       <ImportanceReabilitaion/>
       <Footer/>
     </div>
