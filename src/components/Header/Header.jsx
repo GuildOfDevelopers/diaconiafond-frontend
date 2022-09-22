@@ -19,13 +19,12 @@ const Header = ({openPopup}) => {
             <button className="link" onClick={() => clickToOpenPopup()}>Получить помощь</button>
           </li>
           <li className="links__item">
-            <button className="link">О реабилитации</button>
+            <a className="link" href="#reabilitation">О реабилитации</a>
           </li>
           <li className="links__item">
-            <button className="link">Контакты</button>
+            <a className="link" href="#contacts">Контакты</a>
           </li>
         </ul>
-
 
         <button className="header__button">ПОМОЧЬ ПРОЕКТУ</button>
 

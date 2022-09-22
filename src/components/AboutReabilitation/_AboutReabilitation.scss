@@ -1,3 +1,98 @@
-div {
-  color: $color-green;
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+img {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  margin: 0;
+  @include font_32_h2;
+}
+
+p {
+  margin: 0;
+  @include font_20;
+}
+
+.about-reabilitaton {
+  position: relative;
+  padding-top: 44px;
+}
+
+.about-reabilitaton__stages {
+  padding-top: 182px;
+  background-image: url(../../images/aboutHeaderGroup.svg);
+  background-repeat: no-repeat;
+
+  h2 {
+    margin-bottom: 28px;
+  }
+}
+
+.about-reabilitaton__descr {
+  display: flex;
+  margin-bottom: 97px;
+
+  p {
+    max-width: 479px;
+    margin-right: 21px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  .greenSpan {
+    color: $color-lightGreen;
+  }
+}
+
+.about-reabilitaton__how-to-get {
+
+  position: absolute;
+  z-index: 100;
+  top: 58%;
+  background-color: $color-lightGreen;
+  background-image: url(../../images/aboutReabilitationHome.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 28px 26px 77px 330px;
+  background-position: left 12% center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+
+  h2 {
+    max-width: 76%;
+    margin-bottom: 16px;
+    color: white;
+  }
+
+  a {
+    margin-bottom: 16px;
+    @include font_24;
+    text-decoration: none;
+    color: white;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.how-to-get__alone {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+  height: 312px;
+  position: relative;
+  background-image: url(../../images/aboutReabLines.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom 27%;
+
+  img {
+    position: absolute;
+    z-index: -10;
+  }
 }
