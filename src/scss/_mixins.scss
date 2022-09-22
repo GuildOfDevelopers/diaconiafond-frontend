@@ -34,7 +34,7 @@
   line-height: 32px;
 }
 
-@mixin font_20 {
+@mixin font_18 {
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
@@ -57,4 +57,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+
+@mixin btn {
+  color: $color-white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
 }
