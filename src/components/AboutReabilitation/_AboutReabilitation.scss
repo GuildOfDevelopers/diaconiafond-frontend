@@ -1,25 +1,27 @@
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-img {
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-h2 {
-  margin: 0;
-  @include font_32_h2;
-}
-
-p {
-  margin: 0;
-  @include font_20;
-}
-
 .about-reabilitaton {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
   padding-top: 44px;
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  
+  img {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  }
+  
+  h2 {
+    margin: 0;
+    @include font_32_h2;
+  }
+  
+  p {
+    margin: 0;
+    @include font_20;
+  }
 }
 
 .about-reabilitaton__stages {
