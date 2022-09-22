@@ -4,9 +4,27 @@ import Checkbox from "./Checkbox";
 import GetHelpBtn from "./GetHelpBtn/GetHelpBtn";
 
 const Form = () => {
-  const onSubmit = (e) => {
+  const formRef = React.useRef(null)
+
+  const isCheckBoxOrRadio = type => ['checkbox', 'radio'].includes(type)
+
+  const onSubmit = async (e) => {
     e.preventDefault()
 
+    const data = {}
+
+    for (let field of formRef.current) {
+      const {name} = field
+      console.log(field)
+
+      if (name) {
+        const {type, checked, value} = field
+        data[name] = isCheckBoxOrRadio(type) ? checked : value
+      }
+    }
+
+    //тут запрос на сервер
+    console.log(data)
   }
 
   return (
@@ -17,23 +35,23 @@ const Form = () => {
         их&nbsp;близкие.</p>
       <span
         className={style.desc}>Пожалуйста, оставьте ваши контактные данные, наши координаторы свяжутся с&nbsp;вами.</span>
-      <form className={style.form} id='popupForm'>
+      <form className={style.form} ref={formRef}>
         <label>
           <span className={style.visually_hidden}>Фамилия</span>
-          <input type="text" placeholder='Фамилия'/>
+          <input name='surname' type="text" placeholder='Фамилия'/>
         </label>
         <label>
           <span className={style.visually_hidden}>Имя</span>
-          <input type="text" placeholder='Имя'/></label>
+          <input name='name' type="text" placeholder='Имя'/></label>
         <label>
           <span className={style.visually_hidden}>Отчество</span>
-          <input type="text" placeholder='Отчество'/></label>
+          <input name='patronymic' type="text" placeholder='Отчество'/></label>
         <label>
           <span className={style.visually_hidden}>Год рождения</span>
-          <input type="date" placeholder='Год рождения'/></label>
+          <input name='date' type="number" min='1900' max='2099' step='1' placeholder='Год рождения'/></label>
         <label>
           <span className={style.visually_hidden}>Телефон</span>
-          <input type="tel" placeholder='Телефон'/></label>
+          <input name='tel' type="tel" placeholder='Телефон'/></label>
         <Checkbox label='Согласие на&nbsp;обработку персональных данных' url=''/>
         <GetHelpBtn onClick={onSubmit}/>
       </form>
