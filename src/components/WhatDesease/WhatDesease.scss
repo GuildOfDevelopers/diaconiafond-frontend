@@ -6,42 +6,42 @@
   max-width: 1440px;
   padding: 79px 0 0;
   margin: 0 auto 0;
+  position: relative;
 }
 
 .disease__article {
   background-color: $color-darkGrey;
-  max-width: 1030px;
-  height: 912px;
-  position: relative;
-  padding: 49px 0 0 130px;
+  max-width: 71.5%;
+  box-sizing: border-box;
+  padding: 49px 0 64px 130px;
 }
 
 .disease__title {
-  max-width: 458px;
+  max-width: 450px;
   color: $color-white;
   @include font_32_h2;
   margin: 0;
 }
 
 .disease__subtitle {
-  max-width: 480px;
+  max-width: 55%;
   color: $color-white;
   @include font_20;
   margin: 35px 0 45px 0;
 }
 
 .disease__key-point {
-  max-width: 480px;
+  max-width: 55%;
   color: $color-lightGreen;
   @include font_24;
   margin: 0 0 51px;
 }
 
 .disease__description {
-  max-width: 480px;
+  max-width: 55%;
   color: $color-white;
   @include font_20;
-  margin: 0 0 15px;
+  margin: 0;
 }
 
 .disease__text-highlite {
@@ -51,10 +51,10 @@
 .disease__images {
   display: flex;
   flex-direction: column;
-  max-width: 580px;
+  max-width: 40%;
   position: absolute;
-  top: 112px;
-  right: -280px;
+  top: 19%;
+  right: 9%;
 }
 
 .disease__image {
