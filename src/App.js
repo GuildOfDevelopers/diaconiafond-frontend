@@ -5,7 +5,6 @@ import Slider from "./components/Slider/ Slider";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ImportanceReabilitaion from "./components/ImportanceReabilitaion/ImportanceReabilitaion";
-import GetReabilitation from "./components/GetReabilitation/GetReabilitation";
 import WhatDesease from "./components/WhatDesease/WhatDesease";
 import Popup from "./components/GetHelpPopup/Popup";
 import Layout from "./components/GetHelpPopup/Layout";
@@ -23,12 +22,11 @@ function App() {
         </Popup>
       </Layout>}
 
-      {/*<Header openPopup={setIsPopupOpen}/>*/}
+      <Header openPopup={setIsPopupOpen}/>
       <Slider/>
-      {/*<WhatDesease/>*/}
-      {/*<AboutReabilitation/>*/}
-      {/*<GetReabilitation/>*/}
-      {/*<ImportanceReabilitaion/>*/}
+      <WhatDesease/>
+      <AboutReabilitation/>
+      <ImportanceReabilitaion/>
       <Footer/>
     </div>
   );

@@ -22,6 +22,10 @@ const GetReabilitation = () => {
           </div>
         </div>
         <img className="getreab__image-man" src={imageMan} alt="Мужчина на полу" />
+        <div className="getreab__line-block">
+          <div className='getreab__first-line'></div>
+          <div className='getreab__second-line'></div>
+        </div>
       </div>
     </section>
   );

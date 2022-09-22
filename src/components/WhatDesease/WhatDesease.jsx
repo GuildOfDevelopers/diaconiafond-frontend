@@ -38,14 +38,13 @@ const WhatDesease = () => {
               Этим людям и их семьям нужна комплексная помощь.
             </span>
           </p>
-
           <div className="disease__images">
             <img
               className="disease__image"
               src={imageLector}
               alt="Мужчина читает лекцию"
             />
-            <img src={imageLection} alt="Групповая терапия для мужчин" />
+            <img className="disease__image" src={imageLection} alt="Групповая терапия для мужчин" />
           </div>
         </div>
       </div>
