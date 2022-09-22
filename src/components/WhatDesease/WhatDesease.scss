@@ -10,7 +10,7 @@
 
 .disease__article {
   background-color: $color-darkGrey;
-  width: 1030px;
+  max-width: 1030px;
   height: 912px;
   position: relative;
   padding: 49px 0 0 130px;
@@ -56,3 +56,8 @@
   top: 112px;
   right: -280px;
 }
+
+.disease__image {
+  max-width: 100%;
+}
+

@@ -64,6 +64,27 @@
   width: 679px;
   height: 519px;
   z-index: 3;
-  right: 0;
+  right: 130px;
   top: 150px;
+}
+
+.getreab__line-block {
+  display: flex;
+  max-width: 260px;
+  height: 74px;
+  margin: 26px 0 0 134px;
+  column-gap: 20px;
+}
+
+.getreab__first-line {
+  background-color: $color-lightGreen;
+  width: 180px;
+  height: 8px;
+}
+
+.getreab__second-line {
+  background-color: $color-lightGreen;
+  width: 80px;
+  height: 8px;
+  align-self: flex-end;
 }
