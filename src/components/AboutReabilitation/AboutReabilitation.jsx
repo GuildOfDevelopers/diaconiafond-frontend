@@ -3,7 +3,7 @@ import alone from "../../images/aboutReabilitationAlone.png";
 
 const AboutReabilitation = () => {
   return (
-    <div className="about-reabilitaton">
+    <div className="about-reabilitaton" id="reabilitation">
       <div className="about-reabilitaton__stages container">
         <h2>О реабилитации</h2>
         <div className="about-reabilitaton__descr">

@@ -7,7 +7,7 @@ import email_img from "../../images/email_img.svg"
 
 const Footer = () => {
 
-  return <footer className="footer">
+  return <footer className="footer" id="contacts">
     <div className="footer__content">
 
       <div className="footer__fist-block">
