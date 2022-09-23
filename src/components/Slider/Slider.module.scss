@@ -4,22 +4,33 @@
 
 .wrapper {
   position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 36%;
+    background-color: #303030;
+  }
+}
+
+.wrapper_inner {
+  position: relative;
   max-width: 1440px;
   padding: 64px 130px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 410px;
-    background-color: #303030;
-  }
+.slider_wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .slider {
@@ -28,13 +39,12 @@
 
 .slide_list {
   display: flex;
-  align-items: center;
-  width: 706px;
   transition: transform 0.5s ease-in-out;
 }
 
 .slide_image {
   display: block;
+  width: 100%;
 }
 
 .arrow_left, .arrow_right {
@@ -57,7 +67,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 16px;
+  margin-top: 13px;
 }
 
 .dot_active, .dot_inactive {
@@ -87,31 +97,78 @@
   margin-right: 26px;
 }
 
+.title, .body {
+  color: $color-darkGrey;
+}
+
 .title {
   margin-bottom: 16px;
   font-style: normal;
   @include font_48_h1;
   text-transform: uppercase;
-  color: #303030;
 }
 
 .body {
   margin-bottom: 32px;
   font-style: normal;
   @include font_24;
-  color: #303030;
 }
 
-//.btn {
-//  width: 236px;
-//  height: 50px;
-//  border: none;
-//  border-radius: 4px;
-//  background-color: $color-lightGreen;
-//  //font-family: 'PF Agora Slab Pro';
-//  font-style: normal;
-//  @include font_18_h4;
-//  text-transform: uppercase;
-//  color: #FFFFFF;
-//}
+
+@media (max-width: 1024px) {
+  .wrapper:before {
+    width: 100vw;
+    height: auto;
+  }
+
+  .wrapper_inner {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .slider_wrapper {
+    position: relative;
+  }
+
+  .slider {
+    max-width: 706px;
+  }
+
+  .arrow_left, .arrow_right {
+    top: auto;
+    bottom: 0;
+    transform: translateY(50%);
+  }
+
+  .arrow_left {
+    left: 0;
+  }
+
+  .arrow_right {
+    right: 0;
+  }
+
+  .content {
+    max-width: 700px;
+    padding: 26px 10px;
+    margin-right: 0;
+  }
+
+  .title, .body {
+    color: $color-white;
+  }
+
+  .title {
+    @include font_32_h2
+  }
+  .body {
+    @include font_20
+  }
+}
+
+@media (max-width: 800px) {
+  .dots {
+    padding-left: 60px;
+  }
+}
 

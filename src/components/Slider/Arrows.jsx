@@ -48,6 +48,7 @@ export default function Arrows() {
           strokeWidth="3"
           strokeLinecap="round"
         />
+
       </svg>
     </div>
   );
