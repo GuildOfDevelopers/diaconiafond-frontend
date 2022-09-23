@@ -3,7 +3,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx"
 
 const Header = ({ openPopup }) => {
-  const isDesktop = useMediaQuery('(min-width: 769px)');
+  const isDesktop = useMediaQuery('(min-width: 870px)');
   const clickToOpenPopup = () => openPopup(true)
 
 
