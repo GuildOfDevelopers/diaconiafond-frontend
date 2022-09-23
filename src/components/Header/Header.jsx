@@ -1,7 +1,9 @@
 import HeaderLogo from "../../images/logo_header.svg"
+import useMediaQuery from "../../hooks/useMediaQuery";
+import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx"
 
-const Header = ({openPopup}) => {
-
+const Header = ({ openPopup }) => {
+  const isDesktop = useMediaQuery('(min-width: 769px)');
   const clickToOpenPopup = () => openPopup(true)
 
 
@@ -9,9 +11,9 @@ const Header = ({openPopup}) => {
 
     <div className="header__content">
 
-      <img className="header__logo" src={HeaderLogo} alt="Логотип"/>
+      <img className="header__logo" src={HeaderLogo} alt="Логотип" />
 
-      <div className="header__menu">
+      {isDesktop ? <div className="header__menu">
 
         <ul className="links">
 
@@ -28,9 +30,11 @@ const Header = ({openPopup}) => {
 
         <button className="header__button">ПОМОЧЬ ПРОЕКТУ</button>
 
-      </div>
+      </div> : <BurgerMenu />}
+
     </div>
   </header>;
 };
 
 export default Header;
+
