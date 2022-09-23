@@ -64,7 +64,6 @@ const Slider = function () {
       <div className={style.wrapper}>
         <div className={style.wrapper_inner}>
           <SlideContent/>
-
           <div className={style.slider_wrapper}>
             <div className={style.slider}>
               <SlidesList/>
@@ -72,10 +71,7 @@ const Slider = function () {
               <Arrows/>
             </div>
           </div>
-
-
         </div>
-
       </div>
     </SliderContext.Provider>
   );

@@ -15,19 +15,18 @@ function App() {
 
   return (
     <div className="App">
-
-      {isPopupOpen && <Layout>
+      {isPopupOpen && <Layout openPopup={setIsPopupOpen}>
         <Popup openPopup={setIsPopupOpen}>
-          <Form/>
+          <Form openPopup={setIsPopupOpen}/>
         </Popup>
       </Layout>}
 
       <Header openPopup={setIsPopupOpen}/>
       <Slider/>
-      <WhatDesease/>
-      <AboutReabilitation/>
-      <ImportanceReabilitaion/>
-      <Footer/>
+      {/*<WhatDesease/>*/}
+      {/*<AboutReabilitation/>*/}
+      {/*<ImportanceReabilitaion/>*/}
+      {/*<Footer/>*/}
     </div>
   );
 }

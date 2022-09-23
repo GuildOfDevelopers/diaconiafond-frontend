@@ -3,13 +3,14 @@ import style from './GetHelpPopup.module.scss'
 import Checkbox from "./Checkbox";
 import GetHelpBtn from "./GetHelpBtn/GetHelpBtn";
 
-const Form = () => {
+const Form = ({openPopup}) => {
   const formRef = React.useRef(null)
 
   const isCheckBoxOrRadio = type => ['checkbox', 'radio'].includes(type)
 
   const onSubmit = async (e) => {
     e.preventDefault()
+    openPopup(false)
 
     const data = {}
 
