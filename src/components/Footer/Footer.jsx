@@ -24,10 +24,12 @@ const Footer = () => {
           <a className="footer__social" href="https://www.youtube.com/channel/UCTgO-IZtkURJ-HlrIJ13FZw" target="_blank" rel="noreferrer"><img className="footer__social_type_icon" src={YoutubeIcon} alt="youtube" /></a>
         </div>
 
-        <p className="footer__link footer__link_type_orange footer__location" ><img className="footer__linkImg " src={location_img} alt="Адрес фонда" />г. Санкт-Петербург, <br />
-          набережная Обводного канала, дом 66</p>
-        <a className="footer__link" href="mailto:info@diaconiaspb.com?subject=Диакония"><img className="footer__linkImg" src={email_img} alt="email" />info@diaconiaspb.com</a>
+        <div className="footer__second-block_type_mobile">
 
+          <p className="footer__link footer__link_type_orange footer__location" ><img className="footer__linkImg " src={location_img} alt="Адрес фонда" />г. Санкт-Петербург, <br />
+            набережная Обводного канала, дом 66</p>
+          <a className="footer__link" href="mailto:info@diaconiaspb.com?subject=Диакония"><img className="footer__linkImg" src={email_img} alt="email" />info@diaconiaspb.com</a>
+        </div>
       </div>
 
     </div>
