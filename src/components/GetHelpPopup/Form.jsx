@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./GetHelpPopup.module.scss";
 import Checkbox from "./Checkbox";
 import GetHelpBtn from "./GetHelpBtn/GetHelpBtn";
-import { useForm } from "react-hook-form";
+import {useForm} from "react-hook-form";
 import InputMask from "react-input-mask";
 
 const Form = () => {
   const {
     register,
-    formState: { errors, isValid },
+    formState: {errors, isValid},
     handleSubmit,
     reset,
   } = useForm({
@@ -17,8 +17,8 @@ const Form = () => {
 
   const formRef = React.useRef(null);
 
-  const [inputValue, setInputValue] = useState("");
-  const [isShow, setIsShow] = useState(false);
+  const [inputValue, setInputValue] = React.useState("");
+  const [isShow, setIsShow] = React.useState(false);
 
   // const isCheckBoxOrRadio = (type) => ["checkbox", "radio"].includes(type);
   const onChangeInput = (e) => {
@@ -160,7 +160,7 @@ const Form = () => {
           label="Согласие на&nbsp;обработку персональных данных"
           url=""
         />
-        <GetHelpBtn onClick={onSubmit} disabled={!isValid} />
+        <GetHelpBtn onClick={onSubmit} disabled={!isValid}/>
       </form>
     </div>
   );

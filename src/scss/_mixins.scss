@@ -59,6 +59,11 @@
   line-height: 26px;
 }
 
-
+@mixin btn {
+  color: $color-white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
 
 

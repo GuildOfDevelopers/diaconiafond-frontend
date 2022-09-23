@@ -8,7 +8,8 @@ import ImportanceReabilitaion from "./components/ImportanceReabilitaion/Importan
 import WhatDesease from "./components/WhatDesease/WhatDesease";
 import Popup from "./components/GetHelpPopup/Popup";
 import Layout from "./components/GetHelpPopup/Layout";
-import Form from "./components/GetHelpPopup/Fom";
+import Form from "./components/GetHelpPopup/Form";
+import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = React.useState(false)
@@ -16,20 +17,21 @@ function App() {
   return (
     <div className="App">
 
-      {isPopupOpen && <Layout>
+      {isPopupOpen && <Layout openPopup={setIsPopupOpen}>
         <Popup openPopup={setIsPopupOpen}>
-          <Form />
+          <Form openPopup={setIsPopupOpen}/>
         </Popup>
       </Layout>}
 
-      <Header openPopup={setIsPopupOpen} />
+      <Header openPopup={setIsPopupOpen}/>
       <main className="main">
-        <Slider />
-        <WhatDesease />
-        <AboutReabilitation />
-        <ImportanceReabilitaion />
+        <Slider/>
+        {/*<WhatDesease/>*/}
+        {/*<AboutReabilitation/>*/}
+        {/*<ImportanceReabilitaion/>*/}
+        <YouCanHelp/>
       </main>
-      <Footer />
+      {/*<Footer/>*/}
     </div>
   );
 }
