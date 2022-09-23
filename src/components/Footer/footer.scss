@@ -67,6 +67,32 @@
 
   .footer__fist-block {
     padding-right: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-bottom: 27px;
+  }
+
+  .footer__second-block {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__socials {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .footer__second-block_type_mobile {
+max-width: 230px;
+  }
+
+  .footer__link {
+    font-size: 14px;
   }
 
 }

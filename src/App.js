@@ -19,19 +19,19 @@ function App() {
 
       {isPopupOpen && <Layout openPopup={setIsPopupOpen}>
         <Popup openPopup={setIsPopupOpen}>
-          <Form openPopup={setIsPopupOpen}/>
+          <Form openPopup={setIsPopupOpen} />
         </Popup>
       </Layout>}
 
-      <Header openPopup={setIsPopupOpen}/>
+      <Header openPopup={setIsPopupOpen} />
       <main className="main">
-        <Slider/>
-        {/*<WhatDesease/>*/}
-        {/*<AboutReabilitation/>*/}
-        {/*<ImportanceReabilitaion/>*/}
-        <YouCanHelp/>
+        <Slider />
+        <WhatDesease />
+        <AboutReabilitation />
+        <ImportanceReabilitaion />
+        <YouCanHelp />
       </main>
-      {/*<Footer/>*/}
+      <Footer />
     </div>
   );
 }
