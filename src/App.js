@@ -19,17 +19,19 @@ function App() {
 
       {isPopupOpen && <Layout>
         <Popup openPopup={setIsPopupOpen}>
-          <Form/>
+          <Form />
         </Popup>
       </Layout>}
 
-      <Header openPopup={setIsPopupOpen}/>
-      <Slider/>
-      <WhatDesease/>
-      <AboutReabilitation/>
-      <ImportanceReabilitaion/>
+      <Header openPopup={setIsPopupOpen} />
+      <main className="main">
+        <Slider />
+        <WhatDesease />
+        <AboutReabilitation />
+        <ImportanceReabilitaion />
+      </main>
       <YouCanHelp/>
-      <Footer/>
+      <Footer />
     </div>
   );
 // import AboutReabilitation from "./components/AboutReabilitation/AboutReabilitation";
