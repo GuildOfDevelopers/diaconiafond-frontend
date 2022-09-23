@@ -23,10 +23,10 @@ function App() {
 
       <Header openPopup={setIsPopupOpen}/>
       <Slider/>
-      {/*<WhatDesease/>*/}
-      {/*<AboutReabilitation/>*/}
-      {/*<ImportanceReabilitaion/>*/}
-      {/*<Footer/>*/}
+      <WhatDesease/>
+      <AboutReabilitation/>
+      <ImportanceReabilitaion/>
+      <Footer/>
     </div>
   );
 }
