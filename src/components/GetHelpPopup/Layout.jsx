@@ -1,9 +1,16 @@
 import React from 'react';
 import style from './GetHelpPopup.module.scss'
 
-const Layout = ({children}) => {
+const Layout = ({children, openPopup}) => {
+  const layoutRef = React.useRef(null)
+
+  const clickToClose = (e) => {
+    if (e.target === layoutRef.current)
+      openPopup(false)
+  }
+
   return (
-    <div className={style.layout}>
+    <div className={style.layout} ref={layoutRef} onClick={clickToClose}>
       {children}
     </div>
   );
