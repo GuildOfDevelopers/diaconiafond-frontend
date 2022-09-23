@@ -9,7 +9,7 @@ const YouCanHelp = () => {
         <div className="section-container d-flex">
           <div className="section-left d-flex">
             <picture className="section-left__picture">
-              <source srcset="/images/YouCanHelp/img-mobile.jpeg" media="(max-width: 768px)"/>
+              <source srcSet="/images/YouCanHelp/img-mobile.jpeg" media="(max-width: 768px)"/>
               <img src={image} alt="Ребенок без семьи" />
             </picture>
             <div className="section-left__left-line"></div>
