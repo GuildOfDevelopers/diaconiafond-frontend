@@ -96,7 +96,7 @@
   }
 
   label {
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
 
     &:last-child {
       margin-bottom: 0;
@@ -192,4 +192,14 @@
     opacity: 1;
   }
 
+}
+
+.inputError {
+  height: 32px;
+
+  p {
+    color: $color-textError;
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
