@@ -1,15 +1,10 @@
-// import AboutReabilitation from "./components/AboutReabilitation/AboutReabilitation";
-// import Slider from "./components/Slider/ Slider";
-import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
+import './App.css';
 
 function App() {
-    return (
-        <div className="App">
-            {/* <Slider/> */}
-            {/* <AboutReabilitation/> */}
-            <YouCanHelp/>
-        </div>
-    );
+  return (
+    <div className="App">
+    </div>
+  );
 }
 
 export default App;
