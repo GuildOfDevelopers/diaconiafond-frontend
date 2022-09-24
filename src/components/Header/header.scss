@@ -58,3 +58,16 @@
   padding: 14px 12px;
   @include btn;
 }
+
+
+.header__button:hover {
+  background-color: $color-green;
+}
+
+.header__button:active {
+  background-color: $color-barkGreen;
+}
+
+.header__button:focus {
+  background-color: $color-lightGreen;
+}
