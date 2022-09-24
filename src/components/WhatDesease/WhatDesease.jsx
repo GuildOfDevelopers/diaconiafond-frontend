@@ -6,8 +6,15 @@ const WhatDesease = () => {
     <section className="desease">
       <div className="disease__wrapper">
         <div className="disease__article">
+          <img
+            className="disease__image-one"
+            src={imageLector}
+            alt="Мужчина читает лекцию"
+          />
+
           <h2 className="disease__title">
-            Так что же это? Болезнь? Или вредная привычка?
+            Так&nbsp;что&nbsp;же&nbsp;это?&nbsp;Болезнь?
+            Или&nbsp;вредная&nbsp;привычка?
           </h2>
           <p className="disease__subtitle">
             Медицина начала признавать алкоголизм заболеванием тогда, когда
@@ -39,11 +46,6 @@ const WhatDesease = () => {
             </span>
           </p>
 
-          <img
-            className="disease__image-one"
-            src={imageLector}
-            alt="Мужчина читает лекцию"
-          />
           <img
             className="disease__image-two"
             src={imageLection}
