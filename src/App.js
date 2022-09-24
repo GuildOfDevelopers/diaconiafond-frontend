@@ -12,13 +12,15 @@ import Form from "./components/Popup/GetHelp/Form";
 import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
 
 function App() {
-  const [HelpPopup, setHelpPopup] = React.useState(false)
+  
+  const [helpPopup, setHelpPopup] = React.useState(false)
   const [charityPopup, setCharityPopup] = React.useState(false)
+
 
   return (
     <div className="App">
 
-      {HelpPopup && <Layout openPopup={setHelpPopup}>
+      {helpPopup && <Layout openPopup={setHelpPopup}>
         <Popup openPopup={setHelpPopup}>
           <Form openPopup={setHelpPopup}/>
         </Popup>
@@ -30,9 +32,9 @@ function App() {
         </Popup>
       </Layout>}
 
-      <Header openHelpPopup={setHelpPopup} openCharityPopup={setCharityPopup}/>
+      <Header openhelpPopup={setHelpPopup} openCharityPopup={setCharityPopup}/>
       <main className="main">
-        <Slider/>
+        <Slider openPopup={setHelpPopup}/>
         <WhatDesease/>
         <AboutReabilitation/>
         <ImportanceReabilitaion/>

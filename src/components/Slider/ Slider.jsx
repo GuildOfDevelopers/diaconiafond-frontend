@@ -36,7 +36,7 @@ const SLIDERS_TEMP = [
   }
 ]
 
-const Slider = function () {
+const Slider = function ({openPopup}) {
   const items = SLIDERS_TEMP;
   const [slide, setSlide] = React.useState(0);
 
@@ -59,6 +59,7 @@ const Slider = function () {
         slidesCount: items.length,
         slideNumber: slide,
         items,
+        openPopup
       }}
     >
       <div className={style.wrapper}>
