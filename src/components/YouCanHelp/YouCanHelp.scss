@@ -103,7 +103,7 @@
   @include font_32_h2;
 }
 
-.section-right .green {
+.section-right__wrapper .green {
   color: $color-lightGreen;
 }
 
@@ -204,6 +204,10 @@
     max-width: 580px;
   }
 
+  .section-right__wrapper {
+    padding-left: 70px;
+  }
+
   .section-right__wrapper::before,
   .section-right__invocation,
   .invocation__header::before {
@@ -231,7 +235,7 @@
   }
 
   .invocation__btn {
-    width: 100%;
+    width: 86%;
   }
 
 }
@@ -242,6 +246,40 @@
   }
 
   .section-right__wrapper{
+    padding-left: 10px;
+    padding-right: 10px;
     max-width: 320px;
   }
+
+  .section-right {
+    padding-top: 22px;
+  }
+
+  .invocation__header {
+    @include font_32_h2;
+    text-transform: none;
+  }
+
+  .section-right__invocation-moble-top svg {
+    height: 87px;
+    align-self: center;
+  }
+
+  .top__header {
+    @include font_22_h3;
+  }
+
+  .top__text {
+    @include font_16;
+  }
+
+  .top__text-your-help {
+    @include font_20;
+  }
+
+  .invocation__btn {
+    width: 100%;
+    @include font_18_h4;
+  }
+
 }
