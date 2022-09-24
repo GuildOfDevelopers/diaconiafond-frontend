@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './GetHelpBtn.module.scss';
+import style from './GetHelp.module.scss';
 
-const GetHelpBtn = ({onClick}) => {
+const GetHelp = ({onClick}) => {
   return <button className={style.btn} onClick={onClick}>Получить помощь</button>;
 };
 
-export default GetHelpBtn;
+export default GetHelp;

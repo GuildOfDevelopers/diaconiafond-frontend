@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./GetHelpPopup.module.scss";
+import style from "./GetHelp.module.scss";
 
 const Checkbox = ({label, url}) => {
   return (

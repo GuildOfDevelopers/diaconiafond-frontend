@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './GetHelpPopup.module.scss'
+import style from './Popup.module.scss'
 
 const Layout = ({children, openPopup}) => {
   const layoutRef = React.useRef(null)

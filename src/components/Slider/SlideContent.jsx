@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {SliderContext} from "./ Slider";
 
 import style from "./Slider.module.scss";
-import GetHelpBtn from "../GetHelpPopup/GetHelpBtn/GetHelpBtn";
+import GetHelpBtn from "../Buttons/GetHelp/GetHelp";
 
 const fn = () => {
   console.log('red')

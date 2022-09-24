@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./GetHelpPopup.module.scss";
+import style from "./GetHelp.module.scss";
 import Checkbox from "./Checkbox";
-import GetHelpBtn from "./GetHelpBtn/GetHelpBtn";
+import GetHelpBtn from "../../Buttons/GetHelp/GetHelp";
 import {useForm} from "react-hook-form";
 import InputMask from "react-input-mask";
 

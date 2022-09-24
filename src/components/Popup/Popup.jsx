@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './GetHelpPopup.module.scss'
+import style from './Popup.module.scss'
 
 const Popup = ({openPopup, children}) => {
   const clickToOpenPopup = () => openPopup(false)
