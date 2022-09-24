@@ -39,13 +39,16 @@ const WhatDesease = () => {
             </span>
           </p>
 
-            <img
-              className="disease__image-one"
-              src={imageLector}
-              alt="Мужчина читает лекцию"
-            />
-            <img className="disease__image-two" src={imageLection} alt="Групповая терапия для мужчин" />
-
+          <img
+            className="disease__image-one"
+            src={imageLector}
+            alt="Мужчина читает лекцию"
+          />
+          <img
+            className="disease__image-two"
+            src={imageLection}
+            alt="Групповая терапия для мужчин"
+          />
         </div>
       </div>
     </section>

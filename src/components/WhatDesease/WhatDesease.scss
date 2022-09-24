@@ -13,7 +13,8 @@
   background-color: $color-darkGrey;
   max-width: 71.5%;
   box-sizing: border-box;
-  padding: 49px 0 64px 9%;
+  padding: 49px 0 64px 130px;
+  min-width: 320px;
 }
 
 .disease__title {
@@ -26,50 +27,51 @@
 .disease__subtitle {
   max-width: 55%;
   color: $color-white;
-  @include font_20;
   margin: 35px 0 45px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .disease__key-point {
   max-width: 55%;
   color: $color-lightGreen;
-  @include font_24;
   margin: 0 0 51px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .disease__description {
   max-width: 55%;
   color: $color-white;
-  @include font_20;
-  margin: 0;
+  margin: 0 0 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .disease__text-highlite {
   color: $color-lightGreen;
 }
 
-// .disease__images {
-//   display: flex;
-//   flex-direction: column;
-//   max-width: 40%;
-//   position: absolute;
-//   top: 19%;
-//   right: 9%;
-// }
-
 .disease__image-one {
   max-width: 100%;
   position: absolute;
-  top: 19%;
-  right: 9%;
+  top: 180px;
+  right: 130px;
+  width: 40.3%;
 }
 
 .disease__image-two {
   max-width: 100%;
   position: absolute;
-  top: 55%;
-  right: 9%;
-  width:580px
+  top: 515px;
+  right: 130px;
+  width: 40.3%;
 }
 
 @media (max-width: 320px) {
@@ -111,19 +113,17 @@
   }
 
   .disease__image-one {
-
-    max-width: 100%;
+    width: 100%;
     top: -90px;
     right: 0;
   }
 
   .disease__image-two {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     height: 184px;
     top: 0;
     right: 0;
     margin: 0;
   }
-
 }
