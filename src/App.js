@@ -12,7 +12,7 @@ import Form from "./components/Popup/GetHelp/Form";
 import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
 
 function App() {
-  
+
   const [helpPopup, setHelpPopup] = React.useState(false)
   const [charityPopup, setCharityPopup] = React.useState(false)
 

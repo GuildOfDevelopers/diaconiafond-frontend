@@ -122,6 +122,7 @@
   }
 
   .wrapper_inner {
+    overflow: hidden;
     flex-direction: column-reverse;
     padding: 0;
   }
@@ -141,11 +142,11 @@
   }
 
   .arrow_left {
-    left: 0;
+    left: calc(7% - 44px);
   }
 
   .arrow_right {
-    right: 0;
+    right: calc(7% - 44px);;
   }
 
   .content {
@@ -163,6 +164,16 @@
   }
   .body {
     @include font_20
+  }
+}
+
+@media (max-width: 706px) {
+  .arrow_left {
+    left: 0;
+  }
+
+  .arrow_right {
+    right: 0;
   }
 }
 
