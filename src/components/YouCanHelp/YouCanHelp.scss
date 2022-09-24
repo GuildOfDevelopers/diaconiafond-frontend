@@ -5,36 +5,45 @@
   display: flex;
 }
 
-.pt-112 {
-  padding-top: 112px;
-}
-
-.wrapper-on-top {
-  display: none;
-  height: 100px;
-  background-color: $color-darkGrey;
-}
-
 .wrapper {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, $color-white 50%, $color-darkGrey 50%);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    width: 60%;
+    background-color: #303030;
+  }
 }
 
 .section-container {
+  justify-content: space-between;
   margin: 0 auto;
+  max-width: 1440px;
+  padding: 112px 130px 0 130px;
+  overflow: hidden;
 }
 
 .section-left {
   position: relative;
   z-index: 1;
+  flex-shrink: 1;
   flex-direction: column;
-  margin-top: -200px;
-  padding-left: 130px;
+  margin-right: 60px;
+  transform: translateY(-200px);
 }
 
 .section-left__picture {
   margin-bottom: 24px;
+  width: 100%;
+}
+
+.section-left__picture img {
+  width: 100%;
 }
 
 .section-left__left-line {
@@ -55,16 +64,25 @@
 
 .section-right {
   position: relative;
-  left: -180px;
-  padding: 47px 130px 110px 366px;
-  background-color: $color-darkGrey;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 47px 0 110px 0;
 }
 
-.section-right::before {
-  content: url('../../images/YouCanHelp/icon.svg');
-  position: absolute;
-  bottom: 109px;
-  left: 68px;
+.section-right__wrapper {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -230px;
+    top: 100px;
+    bottom: -130px;
+    width: 100%;
+    background-color: #303030;
+  }
 }
 
 .top__text-container {
@@ -76,7 +94,7 @@
 .top__text-your-help {
   margin-top: 0;
   margin-bottom: 0;
-  width: 480px;
+  max-width: 480px;
   color: $color-white;
 }
 
@@ -111,13 +129,25 @@
   background-size: 100%;
 }
 
+.section-right__invocation-mobile {
+  display: none;
+}
+
 .invocation__header {
+  position: relative;
   margin-top: 0;
   margin-bottom: 27px;
   max-width: 480px;
   @include font_48_h1;
   color: $color-lightGreen;
   text-transform: uppercase;
+}
+
+.invocation__header::before {
+  content: url('../../images/YouCanHelp/icon.svg');
+  position: absolute;
+  bottom: -92px;
+  left: -200px;
 }
 
 .invocation__btn {
@@ -128,54 +158,90 @@
 }
 
 
-// @media (max-width: 1440px) {
-//   .pt-112 {
-//     padding-top: 0;
-//   }
+@media (max-width: 1200px) {
+  .pt-112 {
+    padding-top: 0;
+  }
 
-//   .section-container {
-//     flex-direction: column;
-//     align-items: center;
-//     background-color: $color-white;
-//   }
+  .wrapper {
+    position: relative;
 
-//   .section-left {
-//     margin-top: 0;
-//     padding-right: 130px;
-//   }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: 664px;
+      bottom: 0;
+      width: 100%;
+      background-color: #303030;
+    }
+  }
 
-//   .section-left__left-line {
-//     margin-bottom: 20px;
-//   }
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 
-//   .section-left__right-line {
-//     right: 0;
-//     margin-bottom: 40px;
-//   }
+  .section-left {
+    margin-right: 0;
+    transform: translateY(0);
+  }
 
-//   .section-right {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     left: 0;
-//     padding-left: 130px;
-//     width: 100%;
-//   }
+  .section-left__left-line {
+    margin-bottom: 20px;
+  }
 
-//   .section-rigth__top-text-container {
-//     right: unset;
-//     margin: 0 auto;
-//   }
+  .section-left__right-line {
+    right: 0;
+    margin-bottom: 40px;
+  }
 
-//   .section-right__bottom-img {
-//     margin-right: 30px;
-//   }
-// }
+  .top__header,
+  .top__text,
+  .top__text-your-help {
+    max-width: 580px;
+  }
 
-// @media (max-width: 950px) {
-//   .section-left,
-//   .section-right {
-//     padding-left: 10px;
-//     padding-right: 10px;
-//   }
-// }
+  .section-right__wrapper::before,
+  .section-right__invocation,
+  .invocation__header::before {
+    display: none;
+  }
+
+  .section-right__invocation-mobile {
+    display: block;
+  }
+
+  .section-right__invocation-moble-top {
+    display: flex;
+  }
+
+  .section-right__invocation-moble-top {
+    margin-bottom: 27px;
+  }
+
+  .section-right__invocation-moble-top svg {
+    margin-right: 30px;
+  }
+
+  .invocation__header {
+    margin-bottom: 0;
+  }
+
+  .invocation__btn {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .wrapper::before {
+    top: 400px;
+  }
+
+  .section-right__wrapper{
+    max-width: 320px;
+  }
+}
