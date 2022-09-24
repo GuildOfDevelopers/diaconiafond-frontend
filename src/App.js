@@ -12,18 +12,25 @@ import Form from "./components/Popup/GetHelp/Form";
 import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
 
 function App() {
-  const [isPopupOpen, setIsPopupOpen] = React.useState(false)
+  const [HelpPopup, setHelpPopup] = React.useState(false)
+  const [charityPopup, setCharityPopup] = React.useState(false)
 
   return (
     <div className="App">
 
-      {isPopupOpen && <Layout openPopup={setIsPopupOpen}>
-        <Popup openPopup={setIsPopupOpen}>
-          <Form openPopup={setIsPopupOpen}/>
+      {HelpPopup && <Layout openPopup={setHelpPopup}>
+        <Popup openPopup={setHelpPopup}>
+          <Form openPopup={setHelpPopup}/>
         </Popup>
       </Layout>}
 
-      <Header openPopup={setIsPopupOpen}/>
+      {charityPopup && <Layout openPopup={setCharityPopup}>
+        <Popup openPopup={setCharityPopup}>
+
+        </Popup>
+      </Layout>}
+
+      <Header openHelpPopup={setHelpPopup} openCharityPopup={setCharityPopup}/>
       <main className="main">
         <Slider/>
         <WhatDesease/>
