@@ -1,0 +1,49 @@
+.payment {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $color-darkGrey;
+}
+
+
+.payment__title {
+  padding-bottom: 9px;
+  @include font_48_h1;
+}
+
+.payment__text {
+  padding-bottom: 20px;
+  @include font_20;
+}
+
+.payment__form {
+  padding-bottom: 40px;
+
+}
+.payment__temp-text {
+padding-bottom: 20px;
+@include font_20;
+}
+
+.payment__link {
+  color: rgb(26, 26, 26);
+  text-decoration: none;
+  font-size: 24px;
+  border-bottom: 2px rgb(26, 26, 26) solid;
+}
+
+.payment__link_type_block{
+  transition: all 0.4s ease-out
+}
+
+.payment__link_type_block:hover {
+  transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 650px) {
+
+}
