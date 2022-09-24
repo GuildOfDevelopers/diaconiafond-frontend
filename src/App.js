@@ -6,32 +6,41 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ImportanceReabilitaion from "./components/ImportanceReabilitaion/ImportanceReabilitaion";
 import WhatDesease from "./components/WhatDesease/WhatDesease";
-import Popup from "./components/GetHelpPopup/Popup";
-import Layout from "./components/GetHelpPopup/Layout";
-import Form from "./components/GetHelpPopup/Form";
+import Popup from "./components/Popup/Popup";
+import Layout from "./components/Popup/Layout";
+import Form from "./components/Popup/GetHelp/Form";
 import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
 
 function App() {
-  const [isPopupOpen, setIsPopupOpen] = React.useState(false)
+
+  const [helpPopup, setHelpPopup] = React.useState(false)
+  const [charityPopup, setCharityPopup] = React.useState(false)
+
 
   return (
     <div className="App">
 
-      {isPopupOpen && <Layout openPopup={setIsPopupOpen}>
-        <Popup openPopup={setIsPopupOpen}>
-          <Form openPopup={setIsPopupOpen}/>
+      {helpPopup && <Layout openPopup={setHelpPopup}>
+        <Popup openPopup={setHelpPopup}>
+          <Form openPopup={setHelpPopup}/>
         </Popup>
       </Layout>}
 
-      <Header openPopup={setIsPopupOpen}/>
+      {charityPopup && <Layout openPopup={setCharityPopup}>
+        <Popup openPopup={setCharityPopup}>
+
+        </Popup>
+      </Layout>}
+
+      <Header openhelpPopup={setHelpPopup} openCharityPopup={setCharityPopup}/>
       <main className="main">
-        {/* <Slider/> */}
-        {/* <WhatDesease/> */}
-        {/* <AboutReabilitation/> */}
-        {/* <ImportanceReabilitaion/> */}
+        <Slider openPopup={setHelpPopup}/>
+        <WhatDesease/>
+        <AboutReabilitation/>
+        <ImportanceReabilitaion/>
         <YouCanHelp/>
       </main>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

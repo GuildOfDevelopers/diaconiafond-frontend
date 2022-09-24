@@ -11,7 +11,7 @@ export const SliderContext = React.createContext(null);
 
 const SLIDERS_TEMP = [
   {
-    url: require('../../images/Sldier/slider-1.jpg'),
+    url: require('../../images/Slider/slider-1.jpg'),
     alt: '',
     content: {
       title: 'Алкоголизм и\u00A0наркомания',
@@ -19,7 +19,7 @@ const SLIDERS_TEMP = [
     }
   },
   {
-    url: require('../../images/Sldier/slider-1.jpg'),
+    url: require('../../images/Slider/slider-2.jpg'),
     alt: '',
     content: {
       title: 'Алкоголизм и\u00A0наркомания',
@@ -27,7 +27,7 @@ const SLIDERS_TEMP = [
     }
   },
   {
-    url: require('../../images/Sldier/slider-1.jpg'),
+    url: require('../../images/Slider/slider-3.jpg'),
     alt: '',
     content: {
       title: 'Алкоголизм и\u00A0наркомания',
@@ -36,7 +36,7 @@ const SLIDERS_TEMP = [
   }
 ]
 
-const Slider = function () {
+const Slider = function ({openPopup}) {
   const items = SLIDERS_TEMP;
   const [slide, setSlide] = React.useState(0);
 
@@ -59,6 +59,7 @@ const Slider = function () {
         slidesCount: items.length,
         slideNumber: slide,
         items,
+        openPopup
       }}
     >
       <div className={style.wrapper}>

@@ -1,0 +1,52 @@
+.layout {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup {
+  position: relative;
+  padding: 44px 80px;
+  background-color: #fff;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  div:nth-child(1) {
+    width: 28px;
+    height: 2px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background-color: #000;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28px;
+      height: 2px;
+      border-radius: 2px;
+      transform: rotate(90deg);
+      background-color: #000;
+    }
+  }
+}
+
+

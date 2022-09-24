@@ -1,11 +1,13 @@
 import React from "react";
-import style from "./GetHelpPopup.module.scss";
+import style from "./GetHelp.module.scss";
 import Checkbox from "./Checkbox";
-import GetHelpBtn from "./GetHelpBtn/GetHelpBtn";
+import GetHelpBtn from "../../Buttons/GetHelp/GetHelp";
 import {useForm} from "react-hook-form";
+import {fetchData} from "../../../hooks/fetchData";
 import InputMask from "react-input-mask";
 
-const Form = () => {
+
+const Form = ({openPopup}) => {
   const {
     register,
     formState: {errors, isValid},
@@ -20,7 +22,6 @@ const Form = () => {
   const [inputValue, setInputValue] = React.useState("");
   const [isShow, setIsShow] = React.useState(false);
 
-  // const isCheckBoxOrRadio = (type) => ["checkbox", "radio"].includes(type);
   const onChangeInput = (e) => {
     const currentValue = e.target.value;
     const lengthValue = currentValue.replace(/[^0-9]/g, "").length;
@@ -28,24 +29,11 @@ const Form = () => {
     setIsShow(lengthValue < 11);
   };
 
-  const onSubmit = (data) => {
-    // e.preventDefault();
-
-    // const data = {};
-
-    // for (let field of formRef.current) {
-    //   const { name } = field;
-
-    //   if (name) {
-    //     const { type, checked, value } = field;
-    //     data[name] = isCheckBoxOrRadio(type) ? checked : value;
-    //   }
-    // }
-
-    //тут запрос на сервер
-    // console.log(data);
-    alert(JSON.stringify(data));
-    reset();
+  const onSubmit = (e) => {
+    e.preventDefault();
+    fetchData(formRef.current)
+    openPopup()
+    reset()
   };
 
   return (
@@ -149,6 +137,7 @@ const Form = () => {
             onChange={onChangeInput}
             value={inputValue}
             type="tel"
+            name='telephone'
             placeholder="Телефон"
             mask="+7(999)-999-99-99"
           />
@@ -158,7 +147,7 @@ const Form = () => {
         </label>
         <Checkbox
           label="Согласие на&nbsp;обработку персональных данных"
-          url=""
+          url="https://diaconiafond.ru/personal-data-usage-terms/"
         />
         <GetHelpBtn onClick={onSubmit} disabled={!isValid}/>
       </form>

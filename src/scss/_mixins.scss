@@ -66,4 +66,7 @@
   line-height: 22px;
 }
 
+@mixin animation($animation) {
+  transition: $animation .4s ease-in-out;
+}
 
