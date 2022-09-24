@@ -56,18 +56,15 @@
 .section-right {
   position: relative;
   left: -180px;
-  padding: 47px 130px 110px 66px;
-  width: 910px;
+  padding: 47px 130px 110px 366px;
   background-color: $color-darkGrey;
 }
 
-.section-right__top {
-  position: relative;
-}
-
-.section-rigth__top-text-container {
-  position: relative;
-  right: -200px;
+.section-right::before {
+  content: url('../../images/YouCanHelp/icon.svg');
+  position: absolute;
+  bottom: 109px;
+  left: 68px;
 }
 
 .top__text-container {
@@ -131,54 +128,54 @@
 }
 
 
-@media (max-width: 1440px) {
-  .pt-112 {
-    padding-top: 0;
-  }
+// @media (max-width: 1440px) {
+//   .pt-112 {
+//     padding-top: 0;
+//   }
 
-  .section-container {
-    flex-direction: column;
-    align-items: center;
-    background-color: $color-white;
-  }
+//   .section-container {
+//     flex-direction: column;
+//     align-items: center;
+//     background-color: $color-white;
+//   }
 
-  .section-left {
-    margin-top: 0;
-    padding-right: 130px;
-  }
+//   .section-left {
+//     margin-top: 0;
+//     padding-right: 130px;
+//   }
 
-  .section-left__left-line {
-    margin-bottom: 20px;
-  }
+//   .section-left__left-line {
+//     margin-bottom: 20px;
+//   }
 
-  .section-left__right-line {
-    right: 0;
-    margin-bottom: 40px;
-  }
+//   .section-left__right-line {
+//     right: 0;
+//     margin-bottom: 40px;
+//   }
 
-  .section-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 0;
-    padding-left: 130px;
-    width: 100%;
-  }
+//   .section-right {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     left: 0;
+//     padding-left: 130px;
+//     width: 100%;
+//   }
 
-  .section-rigth__top-text-container {
-    right: unset;
-    margin: 0 auto;
-  }
+//   .section-rigth__top-text-container {
+//     right: unset;
+//     margin: 0 auto;
+//   }
 
-  .section-right__bottom-img {
-    margin-right: 30px;
-  }
-}
+//   .section-right__bottom-img {
+//     margin-right: 30px;
+//   }
+// }
 
-@media (max-width: 950px) {
-  .section-left,
-  .section-right {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
+// @media (max-width: 950px) {
+//   .section-left,
+//   .section-right {
+//     padding-left: 10px;
+//     padding-right: 10px;
+//   }
+// }

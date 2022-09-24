@@ -26,12 +26,12 @@ function App() {
       <Header openPopup={setIsPopupOpen}/>
       <main className="main">
         <Slider/>
-        {/*<WhatDesease/>*/}
-        {/*<AboutReabilitation/>*/}
-        {/*<ImportanceReabilitaion/>*/}
+        <WhatDesease/>
+        <AboutReabilitation/>
+        <ImportanceReabilitaion/>
         <YouCanHelp/>
       </main>
-      {/*<Footer/>*/}
+      <Footer/>
     </div>
   );
 }
