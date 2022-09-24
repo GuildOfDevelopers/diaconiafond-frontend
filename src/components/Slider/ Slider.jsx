@@ -11,7 +11,7 @@ export const SliderContext = React.createContext(null);
 
 const SLIDERS_TEMP = [
   {
-    url: require('../../images/Sldier/slider-1.jpg'),
+    url: require('../../images/Slider/slider-1.jpg'),
     alt: '',
     content: {
       title: 'Алкоголизм и\u00A0наркомания',
@@ -19,7 +19,7 @@ const SLIDERS_TEMP = [
     }
   },
   {
-    url: require('../../images/Sldier/slider-1.jpg'),
+    url: require('../../images/Slider/slider-2.jpg'),
     alt: '',
     content: {
       title: 'Алкоголизм и\u00A0наркомания',
@@ -27,7 +27,7 @@ const SLIDERS_TEMP = [
     }
   },
   {
-    url: require('../../images/Sldier/slider-1.jpg'),
+    url: require('../../images/Slider/slider-3.jpg'),
     alt: '',
     content: {
       title: 'Алкоголизм и\u00A0наркомания',
