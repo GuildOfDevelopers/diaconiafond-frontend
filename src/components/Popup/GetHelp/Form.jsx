@@ -149,7 +149,8 @@ const Form = ({openPopup}) => {
           label="Согласие на&nbsp;обработку персональных данных"
           url="https://diaconiafond.ru/personal-data-usage-terms/"
         />
-        <GetHelpBtn onClick={onSubmit} disabled={!isValid}/>
+        //disabled здесь не работает!!!
+        <GetHelpBtn onClick={onSubmit} label='Получить помощь' disabled={!isValid}/>
       </form>
     </div>
   );

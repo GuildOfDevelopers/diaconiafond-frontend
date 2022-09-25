@@ -17,7 +17,7 @@ const YouCanHelp = () => {
         <div className="section-right">
           <div className="section-right__wrapper">
             <h2 className="top__header">Кто финансирует <p className="top__header">бесплатное лечение?</p></h2>
-            <p className="top__text">Наш проект существует при поддержке Комитета по социальной политике
+            <p className="top__text">Наш проект существует при поддержке Комитета по&nbsp;социальной политике
               Санкт-Петербурга,
               <spаn className="green"> также благодаря регулярным пожертвованиям неравнодушных людей</spаn>
             </p>
