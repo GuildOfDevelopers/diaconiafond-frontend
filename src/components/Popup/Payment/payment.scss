@@ -47,17 +47,23 @@
 
 @media screen and (max-width: 650px) {
   .payment__title {
-    @include font_32_h2;
+    font-size: 20px;
   }
 
   .payment__text {
     padding-bottom: 20px;
-    @include font_20;
+    @include font_16;
   }
 
   .payment__temp-text {
     padding-bottom: 20px;
-    @include font_20;
+    @include font_16;
+  }
+
+  .payment__link {
+
+    font-size: 18px;
+
   }
 
 }
