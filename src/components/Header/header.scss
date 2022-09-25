@@ -1,6 +1,7 @@
 .header {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   height: 80px;
+  background-color: white;
 }
 
 .header__content {
@@ -72,3 +73,17 @@
 .header__button:focus {
   background-color: $color-lightGreen;
 }
+
+
+@media screen and (max-width: 870px) {
+  .header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    }
+}
+
+
