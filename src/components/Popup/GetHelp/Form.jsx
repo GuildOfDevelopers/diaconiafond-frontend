@@ -22,6 +22,7 @@ const Form = ({openPopup}) => {
 
   const [inputValue, setInputValue] = React.useState("");
   const [isShow, setIsShow] = React.useState(false);
+  const [isCheck, setIsCheck] = React.useState(false)
 
   const onChangeInput = (e) => {
     const currentValue = e.target.value;
@@ -36,10 +37,10 @@ const Form = ({openPopup}) => {
     reset()
   };
 
-  const checkOnPhone = (e) => {
+  const isReadyToSubmit = (e) => {
     setIsShow(!inputValue)
 
-    if (isShow)
+    if (isShow || !isCheck)
       e.preventDefault()
   }
 
@@ -153,10 +154,11 @@ const Form = ({openPopup}) => {
           </div>
         </label>
         <Checkbox
+          toggle={setIsCheck}
           label="Согласие на&nbsp;обработку персональных данных"
           url="https://diaconiafond.ru/personal-data-usage-terms/"
         />
-        <GetHelpBtn fn={checkOnPhone} label='Получить помощь' disabled={!isValid}/>
+        <GetHelpBtn fn={isReadyToSubmit} label='Получить помощь' disabled={!isValid}/>
       </form>
     </div>
   );
