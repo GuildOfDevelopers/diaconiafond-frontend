@@ -20,7 +20,7 @@ const YouCanHelp = ({openCharityPopup}) => {
             <h2 className="top__header">Кто финансирует <p className="top__header">бесплатное лечение?</p></h2>
             <p className="top__text">Наш проект существует при поддержке Комитета по&nbsp;социальной политике
               Санкт-Петербурга,
-              <spаn className="green"> также благодаря регулярным пожертвованиям неравнодушных людей</spаn>
+              <spаn is="x3d" className="green"> также благодаря регулярным пожертвованиям неравнодушных людей</spаn>
             </p>
             <p className="top__text-your-help">
               <div className="green"> Ваша помощь может спасти жизни людей,</div>
