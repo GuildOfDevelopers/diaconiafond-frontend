@@ -1,0 +1,285 @@
+@import "./src/scss/var.scss";
+@import "./src/scss/mixins.scss";
+
+.d-flex {
+  display: flex;
+}
+
+.wrapper {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    width: 60%;
+    background-color: #303030;
+  }
+}
+
+.section-container {
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 112px 130px 0 130px;
+  overflow: hidden;
+}
+
+.section-left {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  margin-right: 60px;
+  transform: translateY(-200px);
+}
+
+.section-left__picture {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.section-left__picture img {
+  width: 100%;
+}
+
+.section-left__left-line {
+  margin-bottom: 66px;
+  width: 180px;
+  height: 8px;
+  background-color: $color-lightGreen;
+}
+
+.section-left__right-line {
+  position: relative;
+  right: 120px + 180px;
+  align-self: flex-end;
+  width: 80px;
+  height: 8px;
+  background-color: $color-lightGreen;
+}
+
+.section-right {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 47px 0 110px 0;
+}
+
+.section-right__wrapper {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -230px;
+    top: 100px;
+    bottom: -130px;
+    width: 100%;
+    background-color: #303030;
+  }
+}
+
+.top__text-container {
+  position: relative;
+}
+
+.top__header,
+.top__text,
+.top__text-your-help {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 480px;
+  color: $color-white;
+}
+
+.top__header {
+  margin-bottom: 17px;
+  @include font_32_h2;
+}
+
+.section-right__wrapper .green {
+  color: $color-lightGreen;
+}
+
+.top__text {
+  margin-bottom: 42px;
+  @include font_20;
+}
+
+.top__text-your-help {
+  margin-bottom: 50px;
+  @include font_24;
+}
+
+.section-right__bottom {
+  align-items: center;
+}
+
+.section-right__bottom-img {
+  margin-right: 112px;
+  width: 145px;
+  height: 140px;
+  background-image: url(../../images/YouCanHelp/icon.svg);
+  background-size: 100%;
+}
+
+.section-right__invocation-mobile {
+  display: none;
+}
+
+.invocation__header {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 27px;
+  max-width: 480px;
+  @include font_48_h1;
+  color: $color-lightGreen;
+  text-transform: uppercase;
+}
+
+.invocation__header::before {
+  content: url('../../images/YouCanHelp/icon.svg');
+  position: absolute;
+  bottom: -92px;
+  left: -200px;
+}
+
+.invocation__btn {
+  padding: 14px 18px;
+  @include btn;
+  text-transform: uppercase;
+  background-color: $color-lightGreen;
+}
+
+
+@media (max-width: 1200px) {
+  .pt-112 {
+    padding-top: 0;
+  }
+
+  .wrapper {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: 664px;
+      bottom: 0;
+      width: 100%;
+      background-color: #303030;
+    }
+  }
+
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .section-left {
+    margin-right: 0;
+    transform: translateY(0);
+  }
+
+  .section-left__left-line {
+    margin-bottom: 20px;
+  }
+
+  .section-left__right-line {
+    right: 0;
+    margin-bottom: 40px;
+  }
+
+  .top__header,
+  .top__text,
+  .top__text-your-help {
+    max-width: 580px;
+  }
+
+  .section-right__wrapper {
+    padding-left: 70px;
+  }
+
+  .section-right__wrapper::before,
+  .section-right__invocation,
+  .invocation__header::before {
+    display: none;
+  }
+
+  .section-right__invocation-mobile {
+    display: block;
+  }
+
+  .section-right__invocation-moble-top {
+    display: flex;
+  }
+
+  .section-right__invocation-moble-top {
+    margin-bottom: 27px;
+  }
+
+  .section-right__invocation-moble-top svg {
+    margin-right: 30px;
+  }
+
+  .invocation__header {
+    margin-bottom: 0;
+  }
+
+  .invocation__btn {
+    width: 86%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .wrapper::before {
+    top: 400px;
+  }
+
+  .section-right__wrapper{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 320px;
+  }
+
+  .section-right {
+    padding-top: 22px;
+  }
+
+  .invocation__header {
+    @include font_32_h2;
+    text-transform: none;
+  }
+
+  .section-right__invocation-moble-top svg {
+    height: 87px;
+    align-self: center;
+  }
+
+  .top__header {
+    @include font_22_h3;
+  }
+
+  .top__text {
+    @include font_16;
+  }
+
+  .top__text-your-help {
+    @include font_20;
+  }
+
+  .invocation__btn {
+    width: 100%;
+    @include font_18_h4;
+  }
+
+}

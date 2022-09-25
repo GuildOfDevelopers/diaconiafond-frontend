@@ -1,0 +1,72 @@
+@mixin font_48_h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+@mixin font_32_h2 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin font_22_h3 {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+@mixin font_18_h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin font_24 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin font_20 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin font_20 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin font_16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin font_16_input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin link {
+  color: #447EB0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin btn {
+  color: $color-white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin animation($animation) {
+  transition: $animation .4s ease-in-out;
+}
+
