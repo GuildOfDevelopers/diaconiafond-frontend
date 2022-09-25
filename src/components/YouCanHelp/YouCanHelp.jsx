@@ -1,8 +1,9 @@
 import image from '../../images/YouCanHelp/img.jpeg';
 import imageMobile from '../../images/YouCanHelp/img-mobile.jpeg';
 import './YouCanHelp.scss'
+import GetHelpBtn from "../Buttons/GetHelp/GetHelp";
 
-const YouCanHelp = () => {
+const YouCanHelp = ({openCharityPopup}) => {
   return (
     <div className="wrapper">
       <div className="section-container d-flex">
@@ -22,7 +23,8 @@ const YouCanHelp = () => {
               <spаn className="green"> также благодаря регулярным пожертвованиям неравнодушных людей</spаn>
             </p>
             <p className="top__text-your-help">
-              <div className="green"> Ваша помощь может спасти жизни людей,</div> восстановить семьи и дать шанс на
+              <div className="green"> Ваша помощь может спасти жизни людей,</div>
+              восстановить семьи и дать шанс на
               счастливую жизнь их детям, жизнь в полноценной семье. На сегодняшний день количество человек, которые
               могут пройти бесплатную реабилитацию зависит от имеющихся ресурсов
             </p>
@@ -51,7 +53,9 @@ const YouCanHelp = () => {
                 </svg>
                 <h1 className="invocation__header">И ты можешь помочь</h1>
               </div>
-              <button className="invocation__btn">Сделать пожертвование</button>
+
+              <GetHelpBtn fn={openCharityPopup} label='Сделать пожертвование' fullWidth={true}/>
+
             </div>
           </div>
         </div>

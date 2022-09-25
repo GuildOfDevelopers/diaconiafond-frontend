@@ -17,7 +17,6 @@ function App() {
   const [helpPopup, setHelpPopup] = React.useState(false)
   const [charityPopup, setCharityPopup] = React.useState(false)
 
-
   return (
     <div className="App">
 
@@ -39,7 +38,7 @@ function App() {
         <WhatDesease/>
         <AboutReabilitation/>
         <ImportanceReabilitaion/>
-        <YouCanHelp/>
+        <YouCanHelp openCharityPopup={setCharityPopup}/>
       </main>
       <Footer/>
     </div>
