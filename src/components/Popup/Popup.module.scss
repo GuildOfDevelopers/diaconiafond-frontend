@@ -1,6 +1,7 @@
 .layout {
   position: fixed;
-  z-index: 10;
+  z-index: 110;
+  overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;
@@ -15,6 +16,11 @@
   position: relative;
   padding: 44px 80px;
   background-color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .close {
@@ -49,4 +55,24 @@
   }
 }
 
+
+@media (max-height: 800px) {
+  .popup {
+    overflow-y: scroll;
+    max-height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 44px 20px;
+  }
+}
 

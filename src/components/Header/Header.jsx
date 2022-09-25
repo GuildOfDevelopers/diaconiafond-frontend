@@ -2,7 +2,7 @@ import HeaderLogo from "../../images/logo_header.svg"
 import useMediaQuery from "../../hooks/useMediaQuery";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx"
 
-const Header = ({openHelpPopup, openCharityPopup}) => {
+const Header = ({ openHelpPopup, openCharityPopup }) => {
   const isDesktop = useMediaQuery('(min-width: 870px)');
 
   const clickToOpenHelpPopup = () => openHelpPopup(true)
@@ -12,7 +12,7 @@ const Header = ({openHelpPopup, openCharityPopup}) => {
 
     <div className="header__content">
 
-      <img className="header__logo" src={HeaderLogo} alt="Логотип"/>
+      <img className="header__logo" src={HeaderLogo} alt="Логотип" />
 
       {isDesktop ? <div className="header__menu">
 
@@ -31,7 +31,7 @@ const Header = ({openHelpPopup, openCharityPopup}) => {
 
         <button className="header__button" onClick={clickToOpenCharityPopup}>ПОМОЧЬ ПРОЕКТУ</button>
 
-      </div> : <BurgerMenu/>}
+      </div> : <BurgerMenu openHelpPopup={openHelpPopup} openCharityPopup={openCharityPopup} />}
 
     </div>
   </header>;

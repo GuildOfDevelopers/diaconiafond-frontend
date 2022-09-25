@@ -1,5 +1,6 @@
 .desease {
   color: $color-white;
+  margin-top: -2px;
 }
 
 .disease__wrapper {
@@ -7,6 +8,7 @@
   padding: 79px 0 0;
   margin: 0 auto 0;
   position: relative;
+  overflow: hidden;
 }
 
 .disease__article {
@@ -80,13 +82,11 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .disease__wrapper {
     padding: 0;
   }
-}
 
-@media (max-width: 960px) {
   .disease__article {
     padding: 49px 0 0;
     width: 100%;

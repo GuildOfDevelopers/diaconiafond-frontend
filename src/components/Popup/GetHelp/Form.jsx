@@ -6,7 +6,6 @@ import {useForm} from "react-hook-form";
 import {fetchData} from "../../../hooks/fetchData";
 import InputMask from "react-input-mask";
 
-
 const Form = ({openPopup}) => {
   const {
     register,
@@ -17,10 +16,13 @@ const Form = ({openPopup}) => {
     mode: "all",
   });
 
+  // console.log(isValid)
+
   const formRef = React.useRef(null);
 
   const [inputValue, setInputValue] = React.useState("");
   const [isShow, setIsShow] = React.useState(false);
+  const [isCheck, setIsCheck] = React.useState(false)
 
   const onChangeInput = (e) => {
     const currentValue = e.target.value;
@@ -29,12 +31,18 @@ const Form = ({openPopup}) => {
     setIsShow(lengthValue < 11);
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    fetchData(formRef.current)
+  const onSubmit = () => {
+    // fetchData(formRef.current)
     openPopup()
     reset()
   };
+
+  const isReadyToSubmit = (e) => {
+    setIsShow(!inputValue)
+
+    if (isShow || !isCheck)
+      e.preventDefault()
+  }
 
   return (
     <div className={style.form}>
@@ -111,6 +119,7 @@ const Form = ({openPopup}) => {
           <span className={style.visually_hidden}>Год рождения</span>
           <input
             type="number"
+            style={{width: '230px'}}
             min="1900"
             max="2099"
             step="1"
@@ -146,11 +155,11 @@ const Form = ({openPopup}) => {
           </div>
         </label>
         <Checkbox
+          toggle={setIsCheck}
           label="Согласие на&nbsp;обработку персональных данных"
           url="https://diaconiafond.ru/personal-data-usage-terms/"
         />
-        //disabled здесь не работает!!!
-        <GetHelpBtn onClick={onSubmit} label='Получить помощь' disabled={!isValid}/>
+        <GetHelpBtn fn={isReadyToSubmit} label='Получить помощь' disabled={!isValid}/>
       </form>
     </div>
   );
