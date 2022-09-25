@@ -12,10 +12,8 @@
 }
 
 .burger {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
+  position: absolute;
+  top: -500px;
   flex-direction: column;
   width: 320px;
   height: 270px;
@@ -24,6 +22,10 @@
 
 .burger_opened {
   display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: ease-out 0.4s;
 }
 
 .burger__container {
@@ -34,19 +36,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .burger-links {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
-
 }
-
-
 
 .burger-links__item {
   padding-bottom: 27px;
@@ -55,7 +52,6 @@
 .burger-links__item:last-of-type {
   padding-bottom: 0;
 }
-
 
 .burger__link {
   font-size: 18px;
@@ -66,6 +62,7 @@
   text-decoration: none;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .burger__button {
@@ -74,4 +71,5 @@
   border-radius: 4px;
   color: white;
   padding: 14px 12px;
+  cursor: pointer;
 }

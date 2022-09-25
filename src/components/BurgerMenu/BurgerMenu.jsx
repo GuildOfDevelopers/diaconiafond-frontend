@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 
 
-const BurgerMenu = () => {
+const BurgerMenu = ({openHelpPopup, openCharityPopup}) => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
+
+  function openHelpPopupBurger() {
+    openHelpPopup(true)
+    handleCloseBurger()
+  }
+
+  function openCharityPopupBurger() {
+    openCharityPopup(true)
+    handleCloseBurger()
+  }
 
   function handleOpenBurger() {
     setBurgerOpen(true)
@@ -29,10 +39,10 @@ const BurgerMenu = () => {
             <ul className="burger-links">
 
               <li className="burger-links__item">
-                <button className="burger__button" onClick={handleCloseBurger}>ПОМОЧЬ ПРОЕКТУ</button>
+                <button className="burger__button" onClick={openCharityPopupBurger}>ПОМОЧЬ ПРОЕКТУ</button>
               </li>
               <li className="burger-links__item">
-                <button className="burger__link" onClick={handleCloseBurger}>Получить помощь</button>
+                <button className="burger__link" onClick={openHelpPopupBurger}>Получить помощь</button>
               </li>
               <li className="burger-links__item">
                 <a className="burger__link" href="#reabilitation" onClick={handleCloseBurger}>О реабилитации</a>
