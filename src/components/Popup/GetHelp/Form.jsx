@@ -6,7 +6,6 @@ import {useForm} from "react-hook-form";
 import {fetchData} from "../../../hooks/fetchData";
 import InputMask from "react-input-mask";
 
-
 const Form = ({openPopup}) => {
   const {
     register,
@@ -16,6 +15,8 @@ const Form = ({openPopup}) => {
   } = useForm({
     mode: "all",
   });
+
+  // console.log(isValid)
 
   const formRef = React.useRef(null);
 
@@ -29,12 +30,18 @@ const Form = ({openPopup}) => {
     setIsShow(lengthValue < 11);
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    fetchData(formRef.current)
+  const onSubmit = () => {
+    // fetchData(formRef.current)
     openPopup()
     reset()
   };
+
+  const checkOnPhone = (e) => {
+    setIsShow(!inputValue)
+
+    if (isShow)
+      e.preventDefault()
+  }
 
   return (
     <div className={style.form}>
@@ -149,8 +156,7 @@ const Form = ({openPopup}) => {
           label="Согласие на&nbsp;обработку персональных данных"
           url="https://diaconiafond.ru/personal-data-usage-terms/"
         />
-        //disabled здесь не работает!!!
-        <GetHelpBtn onClick={onSubmit} label='Получить помощь' disabled={!isValid}/>
+        <GetHelpBtn fn={checkOnPhone} label='Получить помощь' disabled={!isValid}/>
       </form>
     </div>
   );

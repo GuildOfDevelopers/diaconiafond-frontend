@@ -23,25 +23,25 @@ function App() {
 
       {helpPopup && <Layout openPopup={setHelpPopup}>
         <Popup openPopup={setHelpPopup}>
-          <Form openPopup={setHelpPopup} />
+          <Form openPopup={setHelpPopup}/>
         </Popup>
       </Layout>}
 
       {charityPopup && <Layout openPopup={setCharityPopup}>
         <Popup openPopup={setCharityPopup}>
-          <Payment openPopup={setCharityPopup} />
+          <Payment openPopup={setCharityPopup}/>
         </Popup>
       </Layout>}
 
-      <Header openhelpPopup={setHelpPopup} openCharityPopup={setCharityPopup} />
+      <Header openHelpPopup={setHelpPopup} openCharityPopup={setCharityPopup}/>
       <main className="main">
-        <Slider openPopup={setHelpPopup} />
-        <WhatDesease />
-        <AboutReabilitation />
-        <ImportanceReabilitaion />
-        <YouCanHelp />
+        <Slider openPopup={setHelpPopup}/>
+        <WhatDesease/>
+        <AboutReabilitation/>
+        <ImportanceReabilitaion/>
+        <YouCanHelp/>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
