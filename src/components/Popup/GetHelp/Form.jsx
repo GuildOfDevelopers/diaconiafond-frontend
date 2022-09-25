@@ -5,6 +5,7 @@ import GetHelpBtn from "../../Buttons/GetHelp/GetHelp";
 import { useForm } from "react-hook-form";
 // import {fetchData} from "../../../hooks/fetchData";
 import InputMask from "react-input-mask";
+import classnames from "classnames";
 
 const Form = ({ openPopup }) => {
   const {
@@ -60,6 +61,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>Фамилия</span>
           <input
+            class={errors?.lastName ? [style.error] : ""}
             type="text"
             placeholder="Фамилия"
             {...register("lastName", {
@@ -70,13 +72,14 @@ const Form = ({ openPopup }) => {
               },
             })}
           />
-          <div className={style.inputError}>
+          <div class={style.inputError}>
             {errors?.lastName && <p>{errors?.lastName?.message || "Error"}</p>}
           </div>
         </label>
         <label>
           <span className={style.visually_hidden}>Имя</span>
           <input
+            class={errors?.firstName ? [style.error] : ""}
             type="text"
             placeholder="Имя"
             {...register("firstName", {
@@ -96,6 +99,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>E-mail</span>
           <input
+            class={errors?.Email ? [style.error] : ""}
             type="text"
             placeholder="E-mail"
             {...register("Email", {
@@ -109,6 +113,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>Год рождения</span>
           <input
+            class={errors?.date ? [style.error] : ""}
             type="number"
             min="1900"
             max="2099"
@@ -133,6 +138,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>Телефон</span>
           <InputMask
+            class={isShow ? [style.error] : ""}
             onChange={onChangeInput}
             value={inputValue}
             type="tel"
@@ -153,6 +159,7 @@ const Form = ({ openPopup }) => {
           fn={isReadyToSubmit}
           label="Получить помощь"
           disabled={!isValid}
+          isValid={isValid && !isShow && isCheck}
         />
       </form>
     </div>

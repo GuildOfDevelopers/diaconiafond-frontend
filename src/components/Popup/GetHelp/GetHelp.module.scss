@@ -75,7 +75,12 @@
       outline: none;
     }
   }
+
+  input.error:not([type = 'checkbox']):not([type = 'button']) {
+    background-color: $color-inputBlockError;
+  }
 }
+
 
 .checkbox {
   position: relative;
