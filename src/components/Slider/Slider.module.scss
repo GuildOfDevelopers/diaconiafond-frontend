@@ -45,6 +45,7 @@
 
 .slider {
   overflow: hidden;
+  max-width: 624px;
   -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
@@ -156,6 +157,7 @@
   .slider {
     border: none;
   }
+
   .wrapper:before {
     width: 100vw;
     height: auto;
@@ -207,6 +209,7 @@
   .title {
     @include font_32_h2
   }
+
   .body {
     @include font_20
   }
