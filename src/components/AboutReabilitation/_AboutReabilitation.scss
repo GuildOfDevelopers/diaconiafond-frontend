@@ -68,6 +68,7 @@
 
   h2 {
     max-width: 76%;
+    overflow-wrap: break-word;
     margin-bottom: 16px;
     color: white;
   }
@@ -145,14 +146,30 @@
 
 @media(max-width: 768px) {
   .about-reabilitaton__how-to-get {
+    background-size: 18%;
+    padding-left: 175px;
+    background-position: left 7% center;
+
+    h2 {
+      @include font_22_h3;
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .about-reabilitaton__stages {
+    background-image: url(../../images/aboutHands320.svg);
+  }
+
+  .about-reabilitaton__how-to-get {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-position: left 5%;
+    background-position: left 5% top 8%;
     background-size: 21%;
     
     h2 {
-      min-width: 80%;
+      max-width: 88%;
       align-self: flex-end;
       padding-left: 50px;
     }
