@@ -13,4 +13,17 @@
   text-transform: uppercase;
   color: #FFFFFF;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-green;
+  }
+
+  &:active {
+    background-color: $color-barkGreen;
+  }
+
+  &:focus {
+    background-color: $color-lightGreen;
+  }
+
 }
