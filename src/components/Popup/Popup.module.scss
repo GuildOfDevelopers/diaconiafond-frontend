@@ -1,6 +1,7 @@
 .layout {
   position: fixed;
-  z-index: 10;
+  z-index: 110;
+  overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;
@@ -50,9 +51,24 @@
 }
 
 
-@media screen and (max-width: 550px) {
+@media (max-height: 800px) {
   .popup {
+    overflow-y: scroll;
+    max-height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 44px 20px;
   }
- }
+}
 

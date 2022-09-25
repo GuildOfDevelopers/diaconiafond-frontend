@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 import ImportanceReabilitaion from "./components/ImportanceReabilitaion/ImportanceReabilitaion";
 import WhatDesease from "./components/WhatDesease/WhatDesease";
 import Popup from "./components/Popup/Popup";
-import Layout from "./components/Popup/Layout";
 import Form from "./components/Popup/GetHelp/Form";
 import YouCanHelp from "./components/YouCanHelp/YouCanHelp";
 import Payment from "./components/Popup/Payment/Payment";
@@ -20,17 +19,13 @@ function App() {
   return (
     <div className="App">
 
-      {helpPopup && <Layout openPopup={setHelpPopup}>
-        <Popup openPopup={setHelpPopup}>
-          <Form openPopup={setHelpPopup}/>
-        </Popup>
-      </Layout>}
+      {helpPopup && <Popup openPopup={setHelpPopup}>
+        <Form openPopup={setHelpPopup}/>
+      </Popup>}
 
-      {charityPopup && <Layout openPopup={setCharityPopup}>
-        <Popup openPopup={setCharityPopup}>
-          <Payment openPopup={setCharityPopup}/>
-        </Popup>
-      </Layout>}
+      {charityPopup && <Popup openPopup={setCharityPopup}>
+        <Payment openPopup={setCharityPopup}/>
+      </Popup>}
 
       <Header openHelpPopup={setHelpPopup} openCharityPopup={setCharityPopup}/>
       <main className="main">
