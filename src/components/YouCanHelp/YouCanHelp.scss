@@ -151,14 +151,6 @@
   left: -200px;
 }
 
-.invocation__btn {
-  padding: 14px 18px;
-  @include btn;
-  text-transform: uppercase;
-  background-color: $color-lightGreen;
-}
-
-
 @media (max-width: 1200px) {
   .pt-112 {
     padding-top: 0;
@@ -234,11 +226,6 @@
   .invocation__header {
     margin-bottom: 0;
   }
-
-  .invocation__btn {
-    width: 86%;
-  }
-
 }
 
 @media (max-width: 768px) {
@@ -277,10 +264,4 @@
   .top__text-your-help {
     @include font_20;
   }
-
-  .invocation__btn {
-    width: 100%;
-    @include font_18_h4;
-  }
-
 }

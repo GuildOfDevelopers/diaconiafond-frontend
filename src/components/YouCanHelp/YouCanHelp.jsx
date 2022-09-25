@@ -30,7 +30,7 @@ const YouCanHelp = ({openCharityPopup}) => {
             </p>
             <div className="section-right__invocation invocation">
               <h1 className="invocation__header">И ты можешь помочь</h1>
-              <button className="invocation__btn">Сделать пожертвование</button>
+              <GetHelpBtn fn={openCharityPopup} label='Сделать пожертвование' fullWidth={true}/>
             </div>
             <div className="section-right__invocation-mobile invocation">
               <div className="section-right__invocation-moble-top">
@@ -53,9 +53,7 @@ const YouCanHelp = ({openCharityPopup}) => {
                 </svg>
                 <h1 className="invocation__header">И ты можешь помочь</h1>
               </div>
-
               <GetHelpBtn fn={openCharityPopup} label='Сделать пожертвование' fullWidth={true}/>
-
             </div>
           </div>
         </div>
