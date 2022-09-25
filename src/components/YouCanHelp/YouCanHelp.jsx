@@ -6,7 +6,7 @@ import GetHelpBtn from "../Buttons/GetHelp/GetHelp";
 const YouCanHelp = ({openCharityPopup}) => {
   return (
     <div className="wrapper">
-      <div className="section-container d-flex">
+      <section className="section-container d-flex">
         <div className="section-left d-flex">
           <picture className="section-left__picture">
             <source srcSet={imageMobile} media="(max-width: 768px)"/>
@@ -20,16 +20,17 @@ const YouCanHelp = ({openCharityPopup}) => {
             <h2 className="top__header">Кто финансирует <p className="top__header">бесплатное лечение?</p></h2>
             <p className="top__text">Наш проект существует при поддержке Комитета по&nbsp;социальной политике
               Санкт-Петербурга,
-              <spаn is="x3d" className="green"> также благодаря регулярным пожертвованиям неравнодушных людей</spаn>
+              <span style={{display: 'inline'}} className="green"> также благодаря регулярным пожертвованиям
+                неравнодушных людей</span>
             </p>
             <p className="top__text-your-help">
-              <div className="green"> Ваша помощь может спасти жизни людей,</div>
+              <span className="green"> Ваша помощь может спасти жизни людей, </span>
               восстановить семьи и дать шанс на
               счастливую жизнь их детям, жизнь в полноценной семье. На сегодняшний день количество человек, которые
               могут пройти бесплатную реабилитацию зависит от имеющихся ресурсов
             </p>
             <div className="section-right__invocation invocation">
-              <h1 className="invocation__header">И ты можешь помочь</h1>
+              <h2 className="invocation__header">И ты можешь помочь</h2>
               <GetHelpBtn fn={openCharityPopup} label='Сделать пожертвование' fullWidth={true}/>
             </div>
             <div className="section-right__invocation-mobile invocation">
@@ -57,7 +58,7 @@ const YouCanHelp = ({openCharityPopup}) => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
