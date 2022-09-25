@@ -14,10 +14,12 @@ const Popup = ({openPopup, children}) => {
   return (
     <div className={style.layout} ref={layoutRef} onClick={clickToClose}>
       <div className={style.popup}>
-        <div className={style.close} onClick={() => clickToOpenPopup()}>
-          <div></div>
+        <div className={style.wrapper}>
+          <div className={style.close} onClick={() => clickToOpenPopup()}>
+            <div></div>
+          </div>
+          {children}
         </div>
-        {children}
       </div>
     </div>
   );

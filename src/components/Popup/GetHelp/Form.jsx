@@ -119,6 +119,7 @@ const Form = ({openPopup}) => {
           <span className={style.visually_hidden}>Год рождения</span>
           <input
             type="number"
+            style={{width: '230px'}}
             min="1900"
             max="2099"
             step="1"

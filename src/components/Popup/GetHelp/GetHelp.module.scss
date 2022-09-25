@@ -18,29 +18,23 @@
   text-align: center;
   color: $color-darkGrey;
 
-  & .title {
+  .title {
     margin-bottom: 5px;
     font-style: normal;
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 56px;
+    @include font_48_h1;
     text-transform: uppercase;
   }
 
-  & .body {
+  .body {
     margin-bottom: 16px;
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
+    @include font_18_h4
   }
 
-  & .desc {
+  .desc {
     margin-bottom: 16px;
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    @include font_16
   }
 
   label {
@@ -54,7 +48,7 @@
   }
 
   input:not([type = 'checkbox']):not([type = 'button']) {
-    width: 292px;
+    max-width: 292px;
     height: 48px;
     padding: 0 13px;
     border: none;
@@ -121,10 +115,10 @@
 
     &:after {
       content: '';
+      position: absolute;
       background-image: url("../../../images/GetHelpPopup/check.png");
       background-repeat: no-repeat;
       background-size: 18px 18px;
-      position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
@@ -160,5 +154,22 @@
     color: $color-textError;
     font-size: 12px;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    .title {
+      @include font_32_h2
+    }
+
+    .body {
+      @include font_20;
+      font-weight: 500;
+    }
+
+    .desc {
+      @include font_16
+    }
   }
 }
