@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import Slide from "./Slide";
-import {SliderContext} from "./ Slider";
+import {SliderContext} from "./Slider";
 import {browserName} from 'react-device-detect';
 
 import style from "./Slider.module.scss";

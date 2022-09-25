@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {SliderContext} from "./ Slider";
+import {SliderContext} from "./Slider";
 
 import style from "./Slider.module.scss";
 import GetHelpBtn from "../Buttons/GetHelp/GetHelp";
