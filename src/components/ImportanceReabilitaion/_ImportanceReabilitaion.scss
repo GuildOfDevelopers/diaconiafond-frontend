@@ -46,6 +46,7 @@
   @include font_16;
   color: $color-darkGrey;
   margin: 29px 28px 0 0;
+  width: 51%;
 }
 
 .importance__item-second {
@@ -65,6 +66,7 @@
   @include font_16;
   color: $color-darkGrey;
   margin: 29px 28px 0 0;
+  width: 51%;
 }
 
 .importance__item-third {
@@ -86,9 +88,9 @@
   margin: 16px 14px 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1260px) {
   .importance__wrapper {
-    padding: 100px 75px 100px;
+    padding: 179px 75px 100px;
   }
 
   .importance__grid-container {
@@ -112,8 +114,9 @@
   .importance__item-first-image,
   .importance__item-second-image,
   .importance__item-third-image {
+    width: 380px;
     max-width: 380px;
-    width: 40%;
+
   }
 
   .importance__item-third-container {
@@ -126,13 +129,19 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
+  .importance__wrapper {
+    padding: 100px 75px 100px;
+  }
+}
+
+@media (max-width: 1014px) {
   .importance__wrapper {
     padding: 27px 0 85px;
   }
 
   .importance__title {
-    margin-left: 10px;
+    margin: 0 0 18px 10px;
   }
 
   .importance__item-first,
