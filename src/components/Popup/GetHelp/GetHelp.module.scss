@@ -69,7 +69,12 @@
       outline: none;
     }
   }
+
+  input.error:not([type = 'checkbox']):not([type = 'button']) {
+    background-color: $color-inputBlockError;
+  }
 }
+
 
 .checkbox {
   position: relative;
@@ -88,6 +93,7 @@
   .checkbox_label {
     display: block;
     padding-left: 24px;
+    text-decoration: underline;
     cursor: pointer;
 
     a {
