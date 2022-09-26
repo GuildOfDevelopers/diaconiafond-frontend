@@ -103,6 +103,11 @@ const Form = ({ openPopup }) => {
             placeholder="E-mail"
             {...register("Email", {
               required: "Поле обязательно для заполнения",
+              pattern: {
+                value:
+                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: "Введите корректный адрес почты",
+              },
             })}
           />
           <div className={style.inputError}>
