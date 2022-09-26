@@ -2,27 +2,25 @@ import React from "react";
 import style from "./GetHelp.module.scss";
 import Checkbox from "./Checkbox";
 import GetHelpBtn from "../../Buttons/GetHelp/GetHelp";
-import {useForm} from "react-hook-form";
-import {fetchData} from "../../../hooks/fetchData";
+import { useForm } from "react-hook-form";
+import { fetchData } from "../../../hooks/fetchData";
 import InputMask from "react-input-mask";
 
-const Form = ({openPopup}) => {
+const Form = ({ openPopup }) => {
   const {
     register,
-    formState: {errors, isValid},
+    formState: { errors, isValid },
     handleSubmit,
     reset,
   } = useForm({
     mode: "all",
   });
 
-  // console.log(isValid)
-
   const formRef = React.useRef(null);
 
   const [inputValue, setInputValue] = React.useState("");
   const [isShow, setIsShow] = React.useState(false);
-  const [isCheck, setIsCheck] = React.useState(false)
+  const [isCheck, setIsCheck] = React.useState(false);
 
   const onChangeInput = (e) => {
     const currentValue = e.target.value;
@@ -32,17 +30,16 @@ const Form = ({openPopup}) => {
   };
 
   const onSubmit = () => {
-    // fetchData(formRef.current)
-    openPopup()
-    reset()
+    fetchData(formRef.current);
+    openPopup();
+    reset();
   };
 
   const isReadyToSubmit = (e) => {
-    setIsShow(!inputValue)
+    setIsShow(!inputValue);
 
-    if (isShow || !isCheck)
-      e.preventDefault()
-  }
+    if (isShow || !isCheck) e.preventDefault();
+  };
 
   return (
     <div className={style.form}>
@@ -63,6 +60,7 @@ const Form = ({openPopup}) => {
         <label>
           <span className={style.visually_hidden}>Фамилия</span>
           <input
+            class={errors?.lastName ? [style.error] : ""}
             type="text"
             placeholder="Фамилия"
             {...register("lastName", {
@@ -73,13 +71,14 @@ const Form = ({openPopup}) => {
               },
             })}
           />
-          <div className={style.inputError}>
+          <div class={style.inputError}>
             {errors?.lastName && <p>{errors?.lastName?.message || "Error"}</p>}
           </div>
         </label>
         <label>
           <span className={style.visually_hidden}>Имя</span>
           <input
+            class={errors?.firstName ? [style.error] : ""}
             type="text"
             placeholder="Имя"
             {...register("firstName", {
@@ -97,29 +96,25 @@ const Form = ({openPopup}) => {
           </div>
         </label>
         <label>
-          <span className={style.visually_hidden}>Отчество</span>
+          <span className={style.visually_hidden}>E-mail</span>
           <input
+            class={errors?.Email ? [style.error] : ""}
             type="text"
-            placeholder="Отчество"
-            {...register("patronymic", {
+            placeholder="E-mail"
+            {...register("Email", {
               required: "Поле обязательно для заполнения",
-              pattern: {
-                value: /^[a-zA-Zа-яА-ЯёЁ']+[a-zA-Zа-яА-ЯёЁ']?$/,
-                message: "Имя не может содержать специальные символы",
-              },
             })}
           />
           <div className={style.inputError}>
-            {errors?.patronymic && (
-              <p>{errors?.patronymic?.message || "Error"}</p>
-            )}
+            {errors?.Email && <p>{errors?.Email?.message || "Error"}</p>}
           </div>
         </label>
         <label>
           <span className={style.visually_hidden}>Год рождения</span>
           <input
+            class={errors?.date ? [style.error] : ""}
             type="number"
-            style={{width: '230px'}}
+            style={{ width: "230px" }}
             min="1900"
             max="2099"
             step="1"
@@ -143,12 +138,13 @@ const Form = ({openPopup}) => {
         <label>
           <span className={style.visually_hidden}>Телефон</span>
           <InputMask
+            class={isShow ? [style.error] : ""}
             onChange={onChangeInput}
             value={inputValue}
             type="tel"
-            name='telephone'
+            name="telephone"
             placeholder="Телефон"
-            mask="+7(999)-999-99-99"
+            mask="+7 (999)-999-99-99"
           />
           <div className={style.inputError}>
             {isShow && <p>Введите корректный номер телефона</p>}
@@ -159,7 +155,12 @@ const Form = ({openPopup}) => {
           label="Согласие на&nbsp;обработку персональных данных"
           url="https://diaconiafond.ru/personal-data-usage-terms/"
         />
-        <GetHelpBtn fn={isReadyToSubmit} label='Получить помощь' disabled={!isValid}/>
+        <GetHelpBtn
+          fn={isReadyToSubmit}
+          label="Получить помощь"
+          disabled={!isValid}
+          isValid={isValid && !isShow && isCheck}
+        />
       </form>
     </div>
   );
