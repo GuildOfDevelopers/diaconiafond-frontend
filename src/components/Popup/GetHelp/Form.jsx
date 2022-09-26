@@ -115,6 +115,7 @@ const Form = ({ openPopup }) => {
           <input
             class={errors?.date ? [style.error] : ""}
             type="number"
+            style={{width: '230px'}}
             min="1900"
             max="2099"
             step="1"
