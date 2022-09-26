@@ -3,9 +3,8 @@ import style from "./GetHelp.module.scss";
 import Checkbox from "./Checkbox";
 import GetHelpBtn from "../../Buttons/GetHelp/GetHelp";
 import { useForm } from "react-hook-form";
-// import {fetchData} from "../../../hooks/fetchData";
+import { fetchData } from "../../../hooks/fetchData";
 import InputMask from "react-input-mask";
-import classnames from "classnames";
 
 const Form = ({ openPopup }) => {
   const {
@@ -31,7 +30,7 @@ const Form = ({ openPopup }) => {
   };
 
   const onSubmit = () => {
-    // fetchData(formRef.current)
+    fetchData(formRef.current);
     openPopup();
     reset();
   };
@@ -115,7 +114,7 @@ const Form = ({ openPopup }) => {
           <input
             class={errors?.date ? [style.error] : ""}
             type="number"
-            style={{width: '230px'}}
+            style={{ width: "230px" }}
             min="1900"
             max="2099"
             step="1"
