@@ -1,20 +1,17 @@
 import React from "react";
 import style from "./GetHelp.module.scss";
-import classnames from "classnames";
 
-const GetHelp = ({ fn, label, isValid }) => {
-  const btnClass = classnames(
-    style.btn,
-    {
-      [style.disabled]: isValid === false,
-    },
-    {
-      [style.active]: isValid === true,
-    }
-  );
-
+const GetHelp = ({ fn, label = "", isValid, fullWidth = false }) => {
+  console.log(isValid);
   return (
-    <button className={btnClass} onClick={fn}>
+    <button
+      className={[
+        style.btn,
+        fullWidth ? style.btnFull : "",
+        isValid !== undefined ? (isValid ? style.active : style.disabled) : "",
+      ].join(" ")}
+      onClick={fn}
+    >
       {label}
     </button>
   );
