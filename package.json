@@ -1,6 +1,5 @@
 {
   "name": "diaconiafond-frontend",
-  "homepage": "https://GuildOfDevelopers.github.io/diaconiafond-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
