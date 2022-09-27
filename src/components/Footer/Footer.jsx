@@ -13,8 +13,10 @@ const Footer = () => {
       <div className="footer__fist-block">
         <img className="footer__logo" src={FooterLogo} alt="Логотип" />
         <a className="footer__link footer__link_type_orange" href="https://diaconiafond.ru/" target="_blank" rel="noreferrer">Официальный сайт фонда</a>
-        <a className="footer__link" href="tel:+78129243662"><img className="footer__linkImg" src={PhoneImg} alt="телефон офиса фонда" />+7 (812) 924-36-62 Офис Фонда;</a>
-        <a className="footer__link" href="tel:+78129169224"><img className="footer__linkImg" src={PhoneImg} alt="телефон реабилитации" />+7 (812) 916 92 24 Реабилитация;</a>
+        <div className="footer__first-block_type_mobile">
+          <a className="footer__link" href="tel:+78129243662"><img className="footer__linkImg" src={PhoneImg} alt="телефон офиса фонда" />+7 (812) 924-36-62 Офис Фонда;</a>
+          <a className="footer__link" href="tel:+78129169224"><img className="footer__linkImg" src={PhoneImg} alt="телефон реабилитации" />+7 (812) 916 92 24 Реабилитация;</a>
+        </div>
       </div>
 
       <div className="footer__second-block">
