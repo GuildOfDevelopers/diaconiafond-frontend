@@ -2,7 +2,7 @@ import React from "react";
 import style from "./GetHelp.module.scss";
 
 const GetHelp = ({ fn, label = "", isValid, fullWidth = false }) => {
-  console.log(isValid);
+  
   return (
     <button
       className={[

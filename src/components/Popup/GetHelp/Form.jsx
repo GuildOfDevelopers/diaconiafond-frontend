@@ -60,7 +60,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>Фамилия</span>
           <input
-            class={errors?.lastName ? [style.error] : ""}
+            className={errors?.lastName ? [style.error] : ""}
             type="text"
             placeholder="Фамилия"
             {...register("lastName", {
@@ -71,14 +71,14 @@ const Form = ({ openPopup }) => {
               },
             })}
           />
-          <div class={style.inputError}>
+          <div className={style.inputError}>
             {errors?.lastName && <p>{errors?.lastName?.message || "Error"}</p>}
           </div>
         </label>
         <label>
           <span className={style.visually_hidden}>Имя</span>
           <input
-            class={errors?.firstName ? [style.error] : ""}
+            className={errors?.firstName ? [style.error] : ""}
             type="text"
             placeholder="Имя"
             {...register("firstName", {
@@ -98,7 +98,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>E-mail</span>
           <input
-            class={errors?.Email ? [style.error] : ""}
+            className={errors?.Email ? [style.error] : ""}
             type="text"
             placeholder="E-mail"
             {...register("Email", {
@@ -117,7 +117,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>Год рождения</span>
           <input
-            class={errors?.date ? [style.error] : ""}
+            className={errors?.date ? [style.error] : ""}
             type="number"
             style={{ width: "230px" }}
             min="1900"
@@ -143,7 +143,7 @@ const Form = ({ openPopup }) => {
         <label>
           <span className={style.visually_hidden}>Телефон</span>
           <InputMask
-            class={isShow ? [style.error] : ""}
+            className={isShow ? [style.error] : ""}
             onChange={onChangeInput}
             value={inputValue}
             type="tel"
