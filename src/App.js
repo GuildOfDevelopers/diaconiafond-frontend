@@ -17,7 +17,7 @@ function App() {
   const [charityPopup, setCharityPopup] = React.useState(false)
 
   return (
-    <div className="App">
+    <div className={`app ${helpPopup || charityPopup ? 'app_popup-opened' : ''}`}>
 
       {helpPopup && <Popup openPopup={setHelpPopup}>
         <Form openPopup={setHelpPopup}/>
