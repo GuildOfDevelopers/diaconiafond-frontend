@@ -1,5 +1,6 @@
-import imageLector from "../../images/disease-lector.jpg";
-import imageLection from "../../images/disease-lection.jpg";
+import imageGroup from "../../images/disease-group.jpg";
+import imageBoard from "../../images/disease-board.jpg";
+
 
 const WhatDesease = () => {
   return (
@@ -8,7 +9,7 @@ const WhatDesease = () => {
         <div className="disease__article">
           <img
             className="disease__image-one"
-            src={imageLector}
+            src={imageGroup}
             alt="Мужчина читает лекцию"
           />
 
@@ -48,7 +49,7 @@ const WhatDesease = () => {
 
           <img
             className="disease__image-two"
-            src={imageLection}
+            src={imageBoard}
             alt="Групповая терапия для мужчин"
           />
         </div>

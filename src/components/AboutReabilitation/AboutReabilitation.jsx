@@ -1,4 +1,4 @@
-import people from "../../images/aboutReabilitationGroup.png";
+import people from "../../images/about.jpeg";
 import alone from "../../images/aboutReabilitationAlone.png";
 
 const AboutReabilitation = () => {
@@ -13,7 +13,7 @@ const AboutReabilitation = () => {
               20&nbsp;лет помогает людям избавиться от&nbsp;зависимости.
             </span>
             <span className="greenSpan">
-              Лечение проводиться на&nbsp;безвозмездной основе
+              &nbsp;Лечение проводится на&nbsp;безвозмездной основе&nbsp;
             </span>
             и&nbsp;разделено на&nbsp;два этапа: лечение в&nbsp;загородном
             Реабилитационном центре &laquo;Пошитни&raquo; в&nbsp;Псковской

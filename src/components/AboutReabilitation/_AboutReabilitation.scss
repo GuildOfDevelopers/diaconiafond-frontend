@@ -39,6 +39,7 @@
 .about-reabilitaton__descr {
   display: flex;
   margin-bottom: 97px;
+  align-items: center;
 
   p {
     max-width: 479px;
@@ -51,6 +52,14 @@
 
   .greenSpan {
     color: $color-lightGreen;
+  }
+
+  img {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 679px;
   }
 }
 
