@@ -1,6 +1,10 @@
 import imageOne from "../../images/importance-one.jpg";
-import imageTwo from "../../images/importance-two.jpg";
-import imageThree from "../../images/importance-three.jpg";
+//import imageTwo from "../../images/importance-two.jpg";
+//import imageThree from "../../images/importance-three.jpg";
+
+import imageTwo from "../../images/importance-two-new.jpg";
+import imageThree from "../../images/importance-three-new.jpg";
+
 
 const ImportanceReabilitaion = () => {
   return (
@@ -26,7 +30,7 @@ const ImportanceReabilitaion = () => {
             <img
               className="importance__item-second-image"
               src={imageTwo}
-              alt="Мужчина пишет в тетрадке"
+              alt="Мужчины за столом"
             />
             <p className="importance__item-second-text">
               В&nbsp;результате годичного взаимодействия с&nbsp;командой специалистов
